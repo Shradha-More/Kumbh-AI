@@ -15,4 +15,3 @@ Multilingual voice AI assistant for Nashik Kumbh Mela 2027.
 
 Speak in Hindi, Marathi, English or 5 more Indian languages — get instant answers about schedules, ghats, transport, food, and emergencies.
 
-**Model:** [siddharthnavnath7/Kumbh](https://huggingface.co/siddharthnavnath7/Kumbh) (Qwen2.5-3B fine-tuned, Q4_K_M GGUF)
