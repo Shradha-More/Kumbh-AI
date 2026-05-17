@@ -1,0 +1,742 @@
+/* ═══════════════════════════════════════════════════════════════
+   KUMBH MELA SACRED THEME
+   Inspired by: Golden Kumbh pot, lotus flowers, flowing Godavari,
+   devotees in sacred circle, festival saffron-brown warmth
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ─── KUMBH PALETTE (matched from logo) ─── */
+:root {
+  /* Sacred Saffron — primary (the warm burnt-orange from logo text) */
+  --saffron: #BF4B1B;
+  --saffron-light: #D4693F;
+  --saffron-dark: #983B14;
+  --saffron-glow: rgba(191, 75, 27, 0.2);
+  --saffron-subtle: rgba(191, 75, 27, 0.05);
+
+  /* Temple Gold — the golden kumbh pot */
+  --gold: #D4A017;
+  --gold-light: #ECC94B;
+  --gold-dark: #A67C00;
+  --gold-glow: rgba(212, 160, 23, 0.25);
+
+  /* Sacred Maroon — deep devotional color */
+  --maroon: #6B1520;
+  --maroon-light: #8C2030;
+
+  /* Godavari Blue — the flowing river waves */
+  --river: #1976D2;
+  --river-light: #64B5F6;
+  --river-dark: #0D47A1;
+
+  /* Sacred Teal — the green-blue from wave base */
+  --deepblue: #0E4D6E;
+  --teal: #00897B;
+  --teal-light: #4DB6AC;
+
+  /* Lotus Pink — from the lotus flowers */
+  --lotus: #D81B60;
+  --lotus-light: #F06292;
+  --lotus-subtle: rgba(216, 27, 96, 0.06);
+
+  /* Earth tones — grounding warmth */
+  --earth: #5D4037;
+  --earth-light: #8D6E63;
+  --cream: #FDF8F0;
+  --cream-dark: #F5ECD8;
+  --ink: #2E1A0E;
+  --ink-light: #5C3D28;
+  --ink-muted: #8B7355;
+
+  /* Diya flame */
+  --flame: #FF8F00;
+  --flame-glow: rgba(255, 143, 0, 0.3);
+}
+
+
+/* ═══════════════════════════════════════════════════════════════
+   SACRED SVG PATTERNS (used as backgrounds)
+   ═══════════════════════════════════════════════════════════════ */
+
+/* Subtle paisley/rangoli dot pattern */
+.kumbh-pattern {
+  background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Ccircle cx='20' cy='20' r='1.5' fill='%23D4A017' fill-opacity='0.07'/%3E%3Ccircle cx='0' cy='0' r='1' fill='%23BF4B1B' fill-opacity='0.04'/%3E%3Ccircle cx='40' cy='40' r='1' fill='%23BF4B1B' fill-opacity='0.04'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* Sacred circle / mandala ring pattern */
+.kumbh-mandala-bg {
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23D4A017' stroke-opacity='0.05' stroke-width='0.5'%3E%3Ccircle cx='30' cy='30' r='20'/%3E%3Ccircle cx='30' cy='30' r='10'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+
+/* ═══════════════════════════════════════════════════════════════
+   NAVBAR — Warm maroon-to-saffron with gold accents
+   ═══════════════════════════════════════════════════════════════ */
+
+.navbar {
+  background: linear-gradient(135deg, #4A0A12 0%, #6B1520 30%, #983B14 70%, #BF4B1B 100%) !important;
+  box-shadow: 0 1px 0 rgba(212, 160, 23, 0.1), 0 4px 24px rgba(74, 10, 18, 0.4) !important;
+}
+
+.nav-logo {
+  background: linear-gradient(145deg, #ECC94B, #D4A017, #A67C00) !important;
+  box-shadow: 0 2px 10px rgba(212, 160, 23, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.4) !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+}
+
+.nav-title {
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.nav-status {
+  border: 1px solid rgba(212, 160, 23, 0.15) !important;
+}
+
+/* Gold accent line under navbar */
+.navbar::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 5%, rgba(212, 160, 23, 0.3) 30%, rgba(236, 201, 75, 0.5) 50%, rgba(212, 160, 23, 0.3) 70%, transparent 95%);
+}
+
+
+/* ═══════════════════════════════════════════════════════════════
+   HERO — Sacred Kumbh atmosphere
+   Deep maroon → saffron → gold gradient with sacred elements
+   ═══════════════════════════════════════════════════════════════ */
+
+.hero {
+  background: linear-gradient(165deg,
+    #2A060C 0%,
+    #4A0A12 15%,
+    #6B1520 30%,
+    #983B14 50%,
+    #BF5520 65%,
+    #C98520 80%,
+    #D4A017 100%
+  ) !important;
+  position: relative;
+}
+
+/* Kumbh mandala pattern overlay on hero */
+.hero::before {
+  background:
+    url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23ffffff' stroke-opacity='0.03' stroke-width='0.5'%3E%3Ccircle cx='40' cy='40' r='30'/%3E%3Ccircle cx='40' cy='40' r='20'/%3E%3Ccircle cx='40' cy='40' r='10'/%3E%3Cpath d='M40 10 L40 70 M10 40 L70 40' /%3E%3Cpath d='M20 20 L60 60 M60 20 L20 60' /%3E%3C/g%3E%3C/svg%3E") repeat !important;
+  opacity: 1 !important;
+}
+
+/* Gold text for Kumbh Mela span */
+.hero h1 span {
+  color: #ECC94B !important;
+  text-shadow: 0 2px 20px rgba(236, 201, 75, 0.4), 0 0 40px rgba(212, 160, 23, 0.2) !important;
+}
+
+/* Hero badge — gold-bordered */
+.hero-badge {
+  border: 1px solid rgba(212, 160, 23, 0.3) !important;
+  background: rgba(212, 160, 23, 0.1) !important;
+  color: #ECC94B !important;
+}
+
+.hero-badge i {
+  color: #ECC94B !important;
+}
+
+/* Hero CTA — golden accent */
+.hero-cta {
+  background: linear-gradient(135deg, #FFFFFF, #FFF8E8) !important;
+  color: #983B14 !important;
+  border: 1px solid rgba(212, 160, 23, 0.2) !important;
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.25),
+    0 2px 8px rgba(0, 0, 0, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 1),
+    0 0 0 1px rgba(212, 160, 23, 0.15) !important;
+}
+
+.hero-cta:hover {
+  box-shadow:
+    0 12px 40px rgba(0, 0, 0, 0.3),
+    0 0 20px rgba(212, 160, 23, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 1) !important;
+}
+
+.hero-cta i {
+  color: #D4A017 !important;
+}
+
+
+/* ═══════════════════════════════════════════════════════════════
+   SACRED WATER WAVE DIVIDER — Animated flowing Godavari
+   ═══════════════════════════════════════════════════════════════ */
+
+.wave-divider svg path {
+  fill: var(--cream) !important;
+}
+
+/* Multi-layer wave effect */
+.hero .wave-divider {
+  height: 80px !important;
+}
+
+.hero .wave-divider svg {
+  height: 80px !important;
+}
+
+
+/* ═══════════════════════════════════════════════════════════════
+   SACRED DECORATIVE ELEMENTS
+   ═══════════════════════════════════════════════════════════════ */
+
+/* Lotus divider line */
+.lotus-divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 24px 0;
+}
+
+.lotus-divider::before,
+.lotus-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(212, 160, 23, 0.3), transparent);
+}
+
+.lotus-divider .lotus-icon {
+  color: var(--gold);
+  font-size: 16px;
+  opacity: 0.5;
+}
+
+/* Sacred gold top border on cards */
+.action-card::after {
+  background: linear-gradient(90deg, var(--gold-dark), var(--gold-light), var(--gold-dark)) !important;
+}
+
+/* Diya glow effect on important elements */
+.diya-glow {
+  box-shadow: 0 0 20px rgba(255, 143, 0, 0.15), 0 0 60px rgba(212, 160, 23, 0.1);
+}
+
+
+/* ═══════════════════════════════════════════════════════════════
+   KUMBH ANIMATIONS — Sacred motion language
+   ═══════════════════════════════════════════════════════════════ */
+
+/* Diya flame flicker */
+@keyframes diyaFlicker {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  20%      { opacity: 0.85; transform: scale(0.98); }
+  40%      { opacity: 1; transform: scale(1.01); }
+  60%      { opacity: 0.9; transform: scale(0.99); }
+  80%      { opacity: 1; transform: scale(1.005); }
+}
+
+/* Sacred golden glow pulse */
+@keyframes sacredGlow {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(212, 160, 23, 0.2), 0 0 40px rgba(212, 160, 23, 0.05);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(212, 160, 23, 0.35), 0 0 60px rgba(212, 160, 23, 0.1);
+  }
+}
+
+/* Lotus bloom animation */
+@keyframes lotusBlooom {
+  0%   { transform: scale(0.3) rotate(-30deg); opacity: 0; }
+  40%  { transform: scale(1.05) rotate(5deg); opacity: 1; }
+  60%  { transform: scale(0.98) rotate(-2deg); }
+  80%  { transform: scale(1.01) rotate(1deg); }
+  100% { transform: scale(1) rotate(0deg); opacity: 1; }
+}
+
+/* Water flow — gentle horizontal wave */
+@keyframes waterFlow {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Aarti circular glow */
+@keyframes aartiCircle {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Sacred reveal — like opening temple doors */
+@keyframes templeReveal {
+  0%   { clip-path: inset(0 50% 0 50%); opacity: 0; }
+  100% { clip-path: inset(0 0 0 0); opacity: 1; }
+}
+
+/* Bell swing */
+@keyframes bellSwing {
+  0%, 100% { transform: rotate(0deg); }
+  25%      { transform: rotate(8deg); }
+  75%      { transform: rotate(-8deg); }
+}
+
+
+/* ═══════════════════════════════════════════════════════════════
+   HERO FLOATING ICONS — Sacred symbols
+   ═══════════════════════════════════════════════════════════════ */
+
+.hero-float {
+  color: rgba(236, 201, 75, 0.2) !important;
+  opacity: 1 !important;
+  text-shadow: 0 0 20px rgba(212, 160, 23, 0.1);
+}
+
+
+/* ═══════════════════════════════════════════════════════════════
+   LIQUID BLOBS — Sacred colors (gold, saffron, lotus)
+   ═══════════════════════════════════════════════════════════════ */
+
+.liquid-blob:nth-child(1) {
+  background: radial-gradient(circle, rgba(212, 160, 23, 0.35), transparent 70%) !important;
+}
+
+.liquid-blob:nth-child(2) {
+  background: radial-gradient(circle, rgba(191, 75, 27, 0.3), transparent 70%) !important;
+}
+
+.liquid-blob:nth-child(3) {
+  background: radial-gradient(circle, rgba(216, 27, 96, 0.15), transparent 70%) !important;
+}
+
+
+/* ═══════════════════════════════════════════════════════════════
+   ACTION CARDS — Gold-accented, sacred feel
+   ═══════════════════════════════════════════════════════════════ */
+
+.action-card {
+  background: linear-gradient(180deg, #FFFFFF, #FFFDF8) !important;
+  border: 1px solid rgba(212, 160, 23, 0.06) !important;
+}
+
+.action-card:hover {
+  border-color: rgba(212, 160, 23, 0.15) !important;
+  box-shadow: 0 8px 28px rgba(191, 75, 27, 0.08), 0 2px 8px rgba(0, 0, 0, 0.04) !important;
+}
+
+/* Gold shimmer on action icon hover */
+.action-card:hover .action-icon {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12), 0 0 0 2px rgba(212, 160, 23, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.3) !important;
+}
+
+
+/* ═══════════════════════════════════════════════════════════════
+   SECTION TITLES — Gold icon accent
+   ═══════════════════════════════════════════════════════════════ */
+
+.section-title i {
+  color: var(--gold) !important;
+  text-shadow: 0 1px 4px rgba(212, 160, 23, 0.2);
+}
+
+
+/* ═══════════════════════════════════════════════════════════════
+   INFO BANNER — Sacred festival card
+   ═══════════════════════════════════════════════════════════════ */
+
+.info-banner {
+  background: linear-gradient(135deg, #FFFBF0, #FFF3D4) !important;
+  border: 1px solid rgba(212, 160, 23, 0.25) !important;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Gold corner ornament */
+.info-banner::after {
+  content: '🪷';
+  position: absolute;
+  top: -4px;
+  right: 12px;
+  font-size: 20px;
+  opacity: 0.4;
+  transform: rotate(15deg);
+}
+
+.info-banner h3 {
+  color: #7A4400 !important;
+}
+
+.info-banner h3 i {
+  color: #D4A017 !important;
+}
+
+.info-banner .info-row i {
+  color: #D4A017 !important;
+}
+
+.info-banner .info-row {
+  color: #5C3A14 !important;
+}
+
+
+/* ═══════════════════════════════════════════════════════════════
+   CHAT — Sacred messenger feel
+   ═══════════════════════════════════════════════════════════════ */
+
+.chat-avatar {
+  background: linear-gradient(145deg, #D4A017, #A67C00) !important;
+  box-shadow: 0 2px 8px rgba(212, 160, 23, 0.3) !important;
+}
+
+.chat-messages {
+  background: var(--cream) !important;
+  background-image:
+    radial-gradient(circle at 20% 40%, rgba(212, 160, 23, 0.02) 0%, transparent 50%),
+    radial-gradient(circle at 80% 70%, rgba(191, 75, 27, 0.02) 0%, transparent 50%) !important;
+}
+
+/* User bubble — warm saffron */
+.msg-user .msg-bubble {
+  background: linear-gradient(135deg, #BF4B1B, #983B14) !important;
+  box-shadow: 0 4px 16px rgba(191, 75, 27, 0.2), 0 1px 4px rgba(191, 75, 27, 0.1) !important;
+}
+
+.msg-user .msg-bubble::before {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.12) 0%, transparent 50%) !important;
+}
+
+/* Bot avatar — golden kumbh */
+.msg-bot::before {
+  background: linear-gradient(145deg, #D4A017, #A67C00) !important;
+  box-shadow: 0 2px 6px rgba(212, 160, 23, 0.25) !important;
+}
+
+.msg-lang {
+  color: #D4A017 !important;
+}
+
+/* Play button — gold accent */
+.msg-play {
+  background: linear-gradient(135deg, rgba(212, 160, 23, 0.08), rgba(212, 160, 23, 0.03)) !important;
+  border: 1px solid rgba(212, 160, 23, 0.12) !important;
+  color: #A67C00 !important;
+}
+
+.msg-play:hover {
+  background: linear-gradient(135deg, rgba(212, 160, 23, 0.15), rgba(212, 160, 23, 0.06)) !important;
+}
+
+/* Mic button — sacred saffron */
+.btn-mic {
+  background: linear-gradient(145deg, #BF4B1B, #983B14) !important;
+  box-shadow: 0 6px 20px rgba(191, 75, 27, 0.3), 0 0 0 3px rgba(212, 160, 23, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.2) !important;
+}
+
+.btn-mic::after {
+  border: 2px solid rgba(212, 160, 23, 0.15) !important;
+}
+
+/* Send button — gold */
+.btn-send.ready {
+  background: linear-gradient(145deg, #D4A017, #A67C00) !important;
+  box-shadow: 0 4px 12px rgba(212, 160, 23, 0.25) !important;
+}
+
+/* Welcome icon — golden kumbh */
+.chat-welcome-icon {
+  background: linear-gradient(145deg, #D4A017, #A67C00) !important;
+  box-shadow: 0 8px 28px rgba(212, 160, 23, 0.3), 0 0 0 4px rgba(212, 160, 23, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.3) !important;
+  animation: sacredGlow 4s ease-in-out infinite, float 4s ease-in-out infinite !important;
+}
+
+
+/* ═══════════════════════════════════════════════════════════════
+   LANG CHIPS — Gold active state
+   ═══════════════════════════════════════════════════════════════ */
+
+.lang-chip.active {
+  background: linear-gradient(135deg, #D4A017, #A67C00) !important;
+  box-shadow: 0 2px 10px rgba(212, 160, 23, 0.25) !important;
+}
+
+
+/* ═══════════════════════════════════════════════════════════════
+   EXPLORE — River blue header (Godavari theme)
+   ═══════════════════════════════════════════════════════════════ */
+
+.explore-header {
+  background: linear-gradient(135deg, #0D47A1 0%, #1565C3 40%, #1976D2 70%, #1E88E5 100%) !important;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle wave pattern on explore header */
+.explore-header::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 40px;
+  background: url("data:image/svg+xml,%3Csvg viewBox='0 0 1200 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 30 Q150 0 300 30 Q450 60 600 30 Q750 0 900 30 Q1050 60 1200 30 L1200 60 L0 60Z' fill='%23FDF8F0' fill-opacity='0.06'/%3E%3C/svg%3E") repeat-x;
+  background-size: 600px 40px;
+  animation: waterFlow 8s linear infinite;
+}
+
+.filter-chip.active {
+  background: var(--river) !important;
+  border-color: var(--river) !important;
+  box-shadow: 0 2px 10px rgba(25, 118, 210, 0.25) !important;
+}
+
+
+/* ═══════════════════════════════════════════════════════════════
+   EMERGENCY — Deep red with urgency
+   ═══════════════════════════════════════════════════════════════ */
+
+.sos-header {
+  background: linear-gradient(135deg, #B71C1C 0%, #D32F2F 50%, #E53935 100%) !important;
+}
+
+.sos-call-btn {
+  background: linear-gradient(135deg, #D32F2F, #B71C1C) !important;
+}
+
+
+/* ═══════════════════════════════════════════════════════════════
+   AUTH — Sacred warmth
+   ═══════════════════════════════════════════════════════════════ */
+
+.auth-page {
+  background: linear-gradient(165deg, #2A060C 0%, #6B1520 35%, #983B14 65%, #C98520 100%) !important;
+}
+
+.auth-page::before {
+  background:
+    url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23ffffff' stroke-opacity='0.03' stroke-width='0.5'%3E%3Ccircle cx='40' cy='40' r='30'/%3E%3Ccircle cx='40' cy='40' r='20'/%3E%3Ccircle cx='40' cy='40' r='10'/%3E%3C/g%3E%3C/svg%3E") repeat !important;
+}
+
+.auth-card .auth-logo {
+  background: linear-gradient(145deg, #ECC94B, #D4A017, #A67C00) !important;
+  box-shadow: 0 6px 20px rgba(212, 160, 23, 0.3), 0 0 0 3px rgba(212, 160, 23, 0.1) !important;
+}
+
+.auth-btn {
+  background: linear-gradient(135deg, #BF4B1B, #983B14) !important;
+  box-shadow: 0 4px 16px rgba(191, 75, 27, 0.2) !important;
+}
+
+.auth-lang-chip.active {
+  background: var(--gold) !important;
+  border-color: var(--gold) !important;
+  box-shadow: 0 2px 8px rgba(212, 160, 23, 0.2) !important;
+  color: white !important;
+}
+
+
+/* ═══════════════════════════════════════════════════════════════
+   PROFILE — Dark sacred header
+   ═══════════════════════════════════════════════════════════════ */
+
+.profile-header {
+  background: linear-gradient(135deg, #1A0A06 0%, #2E1A0E 50%, #3E2415 100%) !important;
+}
+
+.profile-avatar {
+  background: linear-gradient(145deg, #D4A017, #A67C00) !important;
+  box-shadow: 0 6px 24px rgba(212, 160, 23, 0.35), 0 0 0 4px rgba(212, 160, 23, 0.15) !important;
+}
+
+.profile-stat .num {
+  background: linear-gradient(135deg, #D4A017, #BF4B1B) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text;
+}
+
+.profile-lang-badge {
+  border: 1px solid rgba(212, 160, 23, 0.2) !important;
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+
+/* ═══════════════════════════════════════════════════════════════
+   MAP — Gold-accented controls
+   ═══════════════════════════════════════════════════════════════ */
+
+.map-btn#mapDirBtn {
+  background: linear-gradient(135deg, #D4A017, #A67C00) !important;
+  color: white !important;
+  box-shadow: 0 4px 16px rgba(212, 160, 23, 0.3) !important;
+}
+
+.mpc-btn-primary {
+  background: var(--gold) !important;
+  color: white !important;
+  box-shadow: 0 2px 8px rgba(212, 160, 23, 0.2) !important;
+}
+
+.route-go-btn {
+  background: linear-gradient(135deg, #BF4B1B, #983B14) !important;
+  box-shadow: 0 4px 12px rgba(191, 75, 27, 0.2) !important;
+}
+
+
+/* ═══════════════════════════════════════════════════════════════
+   MOBILE BOTTOM TAB — Gold active indicator
+   ═══════════════════════════════════════════════════════════════ */
+
+@media (max-width: 768px) {
+  .mobile-nav button.active {
+    color: #D4A017 !important;
+  }
+
+  .mobile-nav button.active::after {
+    background: linear-gradient(90deg, #A67C00, #ECC94B, #A67C00) !important;
+  }
+}
+
+
+/* ═══════════════════════════════════════════════════════════════
+   SCROLLBAR — Gold themed
+   ═══════════════════════════════════════════════════════════════ */
+
+@media (min-width: 769px) {
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, rgba(212, 160, 23, 0.4), rgba(191, 75, 27, 0.3)) !important;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, rgba(212, 160, 23, 0.6), rgba(191, 75, 27, 0.5)) !important;
+  }
+}
+
+
+/* ═══════════════════════════════════════════════════════════════
+   SCROLL PROGRESS — Sacred gold bar
+   ═══════════════════════════════════════════════════════════════ */
+
+#scrollProgress {
+  background: linear-gradient(90deg, #A67C00, #D4A017, #ECC94B) !important;
+}
+
+
+/* ═══════════════════════════════════════════════════════════════
+   TOAST — Warm earth tone
+   ═══════════════════════════════════════════════════════════════ */
+
+#toast {
+  background: #2E1A0E !important;
+}
+
+
+/* ═══════════════════════════════════════════════════════════════
+   CHAT SIDEBAR — Sacred new chat button
+   ═══════════════════════════════════════════════════════════════ */
+
+.chat-sidebar-new {
+  background: linear-gradient(135deg, #D4A017, #A67C00) !important;
+  box-shadow: 0 2px 8px rgba(212, 160, 23, 0.25) !important;
+}
+
+.chat-sidebar-item.active {
+  background: rgba(212, 160, 23, 0.08) !important;
+}
+
+.chat-sidebar-item.active i {
+  color: #D4A017 !important;
+}
+
+
+/* ═══════════════════════════════════════════════════════════════
+   FEEDBACK — Gold-accented types
+   ═══════════════════════════════════════════════════════════════ */
+
+.fb-type.active {
+  background: #D4A017 !important;
+  border-color: #D4A017 !important;
+  color: white !important;
+}
+
+.fb-star.active {
+  color: #D4A017 !important;
+}
+
+
+/* ═══════════════════════════════════════════════════════════════
+   FOCUS RING — Gold
+   ═══════════════════════════════════════════════════════════════ */
+
+:focus-visible {
+  outline-color: rgba(212, 160, 23, 0.6) !important;
+}
+
+
+/* ═══════════════════════════════════════════════════════════════
+   SACRED LOADING SPINNER
+   Replace basic spinner with aarti-circle
+   ═══════════════════════════════════════════════════════════════ */
+
+.typing-dots span {
+  background: linear-gradient(135deg, #D4A017, #ECC94B) !important;
+}
+
+.pull-spinner {
+  border-color: rgba(212, 160, 23, 0.2) !important;
+  border-top-color: #D4A017 !important;
+}
+
+
+/* ═══════════════════════════════════════════════════════════════
+   STATUS DOT — Sacred green / warm offline
+   ═══════════════════════════════════════════════════════════════ */
+
+.status-dot.online {
+  background: #66BB6A !important;
+  box-shadow: 0 0 8px rgba(102, 187, 106, 0.5) !important;
+}
+
+.status-dot.offline {
+  background: #EF5350 !important;
+}
+
+
+/* ═══════════════════════════════════════════════════════════════
+   RIPPLE — Gold ripple on sacred elements
+   ═══════════════════════════════════════════════════════════════ */
+
+.ripple-wave {
+  background: radial-gradient(circle, rgba(212, 160, 23, 0.25) 0%, rgba(212, 160, 23, 0) 70%) !important;
+}
+
+
+/* ═══════════════════════════════════════════════════════════════
+   SKELETON — Warm golden shimmer
+   ═══════════════════════════════════════════════════════════════ */
+
+.skeleton {
+  background: linear-gradient(90deg, #F5ECD8 0%, #F5ECD8 100%) !important;
+}
+
+.skeleton::after {
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(212, 160, 23, 0.1) 50%,
+    transparent 100%
+  ) !important;
+}
+
+
+/* ═══════════════════════════════════════════════════════════════
+   REDUCED MOTION
+   ═══════════════════════════════════════════════════════════════ */
+
+@media (prefers-reduced-motion: reduce) {
+  .explore-header::after {
+    animation: none !important;
+  }
+  .chat-welcome-icon {
+    animation: none !important;
+  }
+}

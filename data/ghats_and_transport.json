@@ -1,0 +1,174 @@
+{
+  "ghats": [
+    {
+      "id": "ramkund_ghat",
+      "name": "Ramkund Ghat",
+      "name_hi": "रामकुंड घाट",
+      "name_mr": "रामकुंड घाट",
+      "name_gu": "રામકુંડ ઘાટ",
+      "name_ta": "ராம்குண்ட் கடவு",
+      "name_te": "రామ్‌కుండ్ ఘాట్",
+      "river": "Godavari",
+      "significance_en": "Most sacred ghat — where Lord Ram bathed during exile. Primary Kumbh Mela bathing ghat. The Asthi Vilaya Kund is here for final rites immersion.",
+      "significance_hi": "सबसे पवित्र घाट — जहां भगवान राम ने वनवास के दौरान स्नान किया था। कुंभ मेला का प्राथमिक स्नान घाट।",
+      "significance_mr": "सर्वात पवित्र घाट — जिथे भगवान रामांनी वनवासात स्नान केले होते.",
+      "coordinates": {"lat": 20.0035, "lon": 73.7898},
+      "capacity": 15000,
+      "steps": 120,
+      "bathing_rules_en": "No soap or shampoo in the river. Men: dhoti preferred. Women: saree or salwar kameez. No swimming — designated bathing spots marked.",
+      "timings": "04:00 - 22:00",
+      "facilities": ["Changing rooms (₹10)", "Locker (₹20/hr)", "First aid post", "Police post", "CCTV surveillance"]
+    },
+    {
+      "id": "astivahini_ghat",
+      "name": "Astivahini Ghat (Asthi Sangam)",
+      "name_hi": "अस्तिवाहिनी घाट",
+      "name_mr": "अस्तिवाहिनी घाट",
+      "significance_en": "Used specifically for immersion of ashes (asthi visarjan) of deceased. One of the most sacred places for final rites. Brahmins available for conducting rituals (puja).",
+      "coordinates": {"lat": 20.0040, "lon": 73.7890},
+      "timings": "05:00 - 20:00"
+    },
+    {
+      "id": "gorha_ghat",
+      "name": "Gorha Ghat (Gorakhpur Ghat)",
+      "name_hi": "गोरखपुर घाट",
+      "significance_en": "Managed by Gorakhnath Akhara. Beautiful ghat with old temples on the banks.",
+      "coordinates": {"lat": 20.0045, "lon": 73.7885}
+    },
+    {
+      "id": "sita_gufa_ghat",
+      "name": "Sita Gufa Ghat",
+      "name_hi": "सीता गुफा घाट",
+      "significance_en": "Near Sita Gufa (cave where Sita lived). Quiet, less crowded compared to Ramkund.",
+      "coordinates": {"lat": 20.0060, "lon": 73.7870}
+    },
+    {
+      "id": "kushavart_trimbak",
+      "name": "Kushavart Kund (Trimbakeshwar)",
+      "name_hi": "कुशावर्त कुंड (त्र्यंबकेश्वर)",
+      "name_mr": "कुशावर्त कुंड (त्र्यंबकेश्वर)",
+      "location": "Trimbakeshwar, 28km from Nashik",
+      "significance_en": "The source tank of Godavari River. Second main Kumbh Mela bathing site after Ramkund. Very sacred — bathing here is equivalent to bathing at the source of the river.",
+      "significance_hi": "गोदावरी नदी का उद्गम स्थल टैंक। रामकुंड के बाद दूसरा मुख्य कुंभ मेला स्नान स्थल।",
+      "coordinates": {"lat": 19.9340, "lon": 73.5290},
+      "capacity": 5000
+    }
+  ],
+  "transport": {
+    "railways": {
+      "main_station": {
+        "name": "Nashik Road Railway Station",
+        "name_hi": "नाशिक रोड रेलवे स्टेशन",
+        "name_mr": "नाशिक रोड रेल्वे स्थानक",
+        "code": "NK",
+        "coordinates": {"lat": 19.9900, "lon": 73.8500},
+        "distance_from_ramkund": "10 km",
+        "key_trains": [
+          "Mumbai CST - Manmad (Panchavati Express)",
+          "Mumbai - Nashik - Delhi (Tapovan Express)",
+          "Pune - Nashik",
+          "Kumbh Special Trains (added during Kumbh)"
+        ],
+        "to_city_en": "From station: MSRTC bus (₹15, 30 min) | Auto (₹150-200) | OLA/Uber Cab (₹200-250)",
+        "to_city_hi": "स्टेशन से: MSRTC बस (₹15, 30 मिनट) | ऑटो (₹150-200) | OLA/Uber कैब (₹200-250)"
+      },
+      "secondary_stations": [
+        {"name": "Devlali Station", "code": "DVL", "distance_from_city": "5 km"},
+        {"name": "Igatpuri Station", "code": "IGP", "distance_from_city": "50 km", "note": "Mountain gateway station"}
+      ],
+      "kumbh_special_trains": {
+        "en": "Indian Railways will run Kumbh Special trains during Shahi Snan dates from Mumbai, Pune, Delhi, Ahmedabad, Surat, Hyderabad, Bangalore, and Chennai. Check IRCTC website for schedules closer to event.",
+        "hi": "भारतीय रेलवे शाही स्नान की तारीखों में मुंबई, पुणे, दिल्ली, अहमदाबाद, सूरत, हैदराबाद, बेंगलुरू और चेन्नई से कुंभ विशेष ट्रेनें चलाएगा।"
+      }
+    },
+    "buses": {
+      "main_bus_stand": {
+        "name": "CBS Bus Stand (Central Bus Stand)",
+        "name_hi": "CBS बस स्टैंड (केंद्रीय बस स्टैंड)",
+        "name_mr": "CBS बस स्थानक",
+        "address": "Old Agra Road, Nashik",
+        "coordinates": {"lat": 20.0014, "lon": 73.7963},
+        "distance_from_ramkund": "3 km",
+        "routes": [
+          {"from": "Mumbai", "duration": "4-5 hours", "fare": "₹350-600", "frequency": "Every 30 min"},
+          {"from": "Pune", "duration": "5-6 hours", "fare": "₹400-650", "frequency": "Every 1 hour"},
+          {"from": "Aurangabad", "duration": "3-4 hours", "fare": "₹250-400"},
+          {"from": "Shirdi", "duration": "1.5 hours", "fare": "₹120-200"},
+          {"from": "Trimbakeshwar", "duration": "1 hour", "fare": "₹45", "frequency": "Every 30 min"},
+          {"from": "Saptashrungi (Vani)", "duration": "1.5 hours", "fare": "₹65"}
+        ],
+        "kumbh_note": "During Kumbh, MSRTC will park shuttle buses at city entry points. Private vehicles restricted in Panchavati area on Shahi Snan days."
+      },
+      "mahamarg_bus_stand": {
+        "name": "Mahamarg Bus Stand",
+        "address": "Near Nashik Road Station",
+        "services": "Long distance inter-state buses"
+      },
+      "city_buses": {
+        "en": "City bus routes connect all major areas. Route 1: CBS to Nashik Road Station. Route 5: CBS to Panchavati. Route 8: CBS to Trimbak Road. Fare: ₹10-25.",
+        "hi": "शहर की बस सेवाएं सभी प्रमुख क्षेत्रों को जोड़ती हैं। मार्ग 1: CBS से नाशिक रोड स्टेशन। मार्ग 5: CBS से पंचवटी। किराया: ₹10-25।"
+      }
+    },
+    "air": {
+      "airport": {
+        "name": "Nashik Ozar Airport (Gandhinagar Airport)",
+        "code": "ISK",
+        "coordinates": {"lat": 20.1192, "lon": 73.9128},
+        "distance_from_city": "24 km",
+        "flights": "Limited — Mumbai and Delhi flights. Major airports: Mumbai (4hrs by road) or Pune (5hrs) for more connectivity.",
+        "to_city_en": "Cab from airport to Nashik city: ₹600-800 (45 min)"
+      }
+    },
+    "local_transport": {
+      "auto_rickshaw": {
+        "en": "Most common within city. Meter or fixed fare. Panchavati to CBS Stand: ₹50-80. CBS to Railway Station: ₹150-200.",
+        "hi": "शहर में सबसे आम। मीटर या निश्चित किराया। पंचवटी से CBS स्टैंड: ₹50-80।"
+      },
+      "ola_uber": {
+        "en": "Ola and Uber available in Nashik. Slightly cheaper than auto for longer distances. App-based booking.",
+        "note": "During Kumbh peak days surge pricing applies"
+      },
+      "e_rickshaw": {
+        "en": "Electric rickshaws operate in Panchavati and ghat areas. Eco-friendly, ₹10-20 per person.",
+        "kumbh_note": "During Kumbh Mela, only e-rickshaws allowed within 500m of ghats to reduce pollution"
+      },
+      "shuttle_kumbh": {
+        "en": "During Kumbh Mela, official MSRTC shuttle buses operate from designated parking areas to ghats. Free for pilgrims on Shahi Snan days.",
+        "hi": "कुंभ मेला के दौरान, आधिकारिक MSRTC शटल बसें निर्दिष्ट पार्किंग क्षेत्रों से घाटों तक चलती हैं। शाही स्नान के दिन तीर्थयात्रियों के लिए मुफ्त।"
+      }
+    },
+    "parking": {
+      "en": "During Kumbh: Private vehicles parked at city periphery lots (Rajwada Chowk, Dwarka Circle, Tapovan area). Shuttle service to ghats. Panchavati area vehicle-free zone during Shahi Snan.",
+      "hi": "कुंभ के दौरान: निजी वाहन शहर की परिधि पर पार्किंग स्थलों पर (राजवाड़ा चौक, द्वारका सर्किल, तपोवन क्षेत्र)।",
+      "lots": [
+        {"name": "Rajwada Chowk Parking", "capacity": 5000, "distance_from_ramkund": "1.5 km"},
+        {"name": "Dwarka Circle Parking", "capacity": 3000},
+        {"name": "Tapovan Ground", "capacity": 8000, "note": "Largest lot — shuttle available"}
+      ]
+    },
+    "roads": {
+      "from_mumbai": "Mumbai-Nashik Highway (NH 3/NH 160) via Igatpuri — 171 km, 3.5-4 hours",
+      "from_pune": "Pune-Nashik via Sangamner — 212 km, 4-5 hours",
+      "from_aurangabad": "Nashik-Aurangabad Highway — 105 km, 2.5 hours",
+      "from_shirdi": "Shirdi to Nashik — 85 km, 1.5 hours",
+      "from_surat": "Surat to Nashik via Dhule — 300 km, 5-6 hours",
+      "note": "Expect heavy traffic on approach roads during Shahi Snan days. Leave 4-5 hours extra time."
+    }
+  },
+  "accommodation": {
+    "dharamshalas": [
+      {"name": "Kalaram Temple Dharmshala", "cost": "Free/Donation", "capacity": 300, "location": "Panchavati"},
+      {"name": "Juna Akhara Camp", "cost": "Free for pilgrims", "note": "Available during Kumbh period"},
+      {"name": "Sikh Gurudwara Dharmshala", "cost": "Free", "includes": "Free langar meals"},
+      {"name": "Marwari Dharamshala Nashik", "cost": "₹100-200/night"}
+    ],
+    "budget_hotels": {
+      "en": "Budget hotels available in Panchavati and CBS Stand areas. Range: ₹500-1500/night. Book 3-4 months ahead for Kumbh period.",
+      "areas": ["Panchavati Road", "CBS Stand", "Sharanpur Road", "College Road"]
+    },
+    "kumbh_tent_city": {
+      "en": "During Kumbh Mela, official Tent City is set up by Maharashtra Tourism near Tapovan area. AC and non-AC tents available. Book via Maharashtra Tourism website.",
+      "cost": "₹2000-8000 per night depending on category"
+    }
+  }
+}

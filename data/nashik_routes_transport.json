@@ -1,0 +1,337 @@
+[
+  {
+    "id": "route_mumbai_nashik",
+    "route": "Mumbai to Nashik",
+    "route_hi": "मुंबई से नासिक",
+    "distance_km": 170,
+    "category": "Intercity Route",
+    "modes": [
+      {
+        "mode": "Train",
+        "details_en": "Multiple daily trains connect Mumbai (CST/Dadar/LTT/Kalyan) to Nashik Road station via the Central Railway line through the scenic Kasara Ghat (Thal Ghat) section. Key trains:\n\n1. Panchavati Express (12109/12110): Mumbai CST to Nashik Road. Daily. Departs CST ~6:00 AM (check current schedule). Arrives Nashik Road ~9:25 AM. Duration: ~3.5 hours. Stops at Dadar, Thane, Kalyan, Kasara, Igatpuri. Chair Car and Second Sitting. One of the most popular trains — book early.\n\n2. Godavari Express (12111/12112): Mumbai CST to Manmad via Nashik Road. Daily. Departs CST ~7:10 AM. Arrives Nashik Road ~11:40 AM. Duration: ~4.5 hours. Sleeper and AC options.\n\n3. Tapovan Express (12119/12120): Mumbai CST to Nashik Road. Daily. Departs CST ~6:10 AM. Arrives ~9:55 AM. Duration: ~3.75 hours.\n\n4. Nashik Passenger/MEMU: Multiple local trains throughout the day. Slower (5-6 hours) but available without reservation.\n\n5. Express trains from Mumbai LTT (Lokmanya Tilak Terminus) and Dadar also pass through Nashik Road.\n\nThe Kasara Ghat section (Kasara to Igatpuri) is one of the steepest gradient railway sections in India, offering dramatic views of the Western Ghats. The train passes through multiple tunnels and bridges.\n\nBooking: IRCTC website/app. General class tickets available at the counter. Book Chair Car/AC 1-2 months in advance for guaranteed seat.\n\nFrom Nashik Road station, take a pre-paid auto to your destination (Ramkund/Panchavati: Rs 80-100, CBS: Rs 60-80).",
+        "details_hi": "कई दैनिक ट्रेनें मुंबई CST/दादर/LTT से नासिक रोड — कसारा घाट से। पंचवटी एक्सप्रेस: ~3.5 घंटे, सुबह 6 बजे। गोदावरी एक्सप्रेस: ~4.5 घंटे। तपोवन एक्सप्रेस: ~3.75 घंटे। IRCTC से बुक करें। नासिक रोड स्टेशन से ऑटो — रामकुंड 80-100 रुपये।",
+        "duration": "3.5-5 hours",
+        "cost": "Rs 80-200 (General/Chair Car), Rs 400-800 (AC)"
+      },
+      {
+        "mode": "Bus (MSRTC)",
+        "details_en": "MSRTC operates extensive bus services from Mumbai to Nashik throughout the day and night:\n\n1. Shivneri (AC Volvo): Mumbai-Nashik direct. Departs from Mumbai Central ST (Parel) and Dadar. Every 30-60 minutes from 5 AM to midnight. Duration: 3.5-4.5 hours depending on traffic. Fare: Rs 450-600. Most comfortable option. Online booking on MSRTC website.\n\n2. Shivshahi (Semi-luxury): Non-AC semi-luxury buses. Frequent departures. Duration: 4-5 hours. Fare: Rs 250-350.\n\n3. Ordinary/Express: Non-AC buses. Very frequent (every 15-30 min). Duration: 4.5-6 hours. Fare: Rs 200-280. Can be crowded.\n\nDeparture points in Mumbai: Mumbai Central ST Stand (Parel), Dadar TT (East), Borivali ST. Arrival in Nashik: Nashik CBS (Central Bus Stand) or Mahamarg Bus Stand (new).\n\nPrivate Operators: Neeta Tours, VRL Travels, SRS Travels, and others operate AC sleeper/seater buses, especially for night services. Fare: Rs 400-800. Book on RedBus, AbhiBus, or operator websites.",
+        "details_hi": "MSRTC बस — शिवनेरी (AC वॉल्वो): हर 30-60 मिनट, 3.5-4.5 घंटे, 450-600 रुपये। शिवशाही (सेमी-लक्जरी): 250-350 रुपये। साधारण: 200-280 रुपये। मुंबई सेंट्रल, दादर, बोरीवली से। निजी: नीता, VRL, SRS — AC स्लीपर 400-800 रुपये।",
+        "duration": "3.5-5 hours",
+        "cost": "Rs 200-600 (MSRTC), Rs 400-800 (Private)"
+      },
+      {
+        "mode": "Car/Self-Drive",
+        "details_en": "Two main routes by road from Mumbai to Nashik:\n\nRoute 1 — NH-3 via Kasara Ghat (Thal Ghat): 170 km, 3-4 hours\nMumbai → Eastern Express Highway → Thane → Kalyan → Shahapur → Kasara → Kasara Ghat (winding mountain road, steep gradients, heavy truck traffic) → Igatpuri → Ghoti → Nashik\nThis is the traditional and most used route. The Kasara Ghat section is about 20 km of winding mountain road. Drive carefully — overtaking is risky. Tolls apply.\n\nRoute 2 — Via Igatpuri (newer alignment): Similar route but some sections have been widened/improved.\n\nTips: Start early (before 6 AM) to avoid Mumbai traffic. The ghat section can be foggy in monsoon and winter mornings. Weekend traffic (Friday evening, Sunday evening) is extremely heavy. Petrol stations available at regular intervals. The Maharashtra Samruddhi Mahamarg (expressway) may offer an alternative route by 2027 — check latest updates.\n\nTolls: Approximately Rs 200-300 total for the route.\nFuel cost: Approximately Rs 800-1200 depending on vehicle.",
+        "details_hi": "दो मार्ग: NH-3 कसारा घाट से (170 किमी, 3-4 घंटे) — मुंबई → ठाणे → कल्याण → कसारा → इगतपुरी → नासिक। घाट का मोड़दार रास्ता, सावधानी से। सुबह 6 बजे से पहले निकलें। टोल 200-300 रुपये, ईंधन 800-1200 रुपये।",
+        "duration": "3-4 hours",
+        "cost": "Rs 1000-1500 (fuel + tolls)"
+      },
+      {
+        "mode": "Flight",
+        "details_en": "Direct flights between Mumbai and Nashik are not typically operated due to the short distance. However, for Kumbh 2027, special charter services or short-hop flights may be considered. The nearest airport is Nashik Ozar Airport (ISK), 24 km from the city. Currently has limited commercial flights from select cities. Most travelers fly into Mumbai's Chhatrapati Shivaji Maharaj International Airport (BOM) and then travel by road or rail to Nashik. Helicopter charters from Mumbai to Nashik are available for premium travelers (Rs 50,000-1,00,000).",
+        "details_hi": "मुंबई-नासिक छोटी दूरी के कारण सीधी उड़ान सामान्यतः नहीं। मुंबई एयरपोर्ट (BOM) से सड़क/रेल सबसे अच्छा। नासिक ओझर एयरपोर्ट सीमित उड़ानें। हेलीकॉप्टर चार्टर उपलब्ध।"
+      }
+    ],
+    "tips_en": "During Kumbh 2027, expect significantly increased travel times due to crowds. Book trains and buses weeks in advance. The Shivneri AC bus is the most comfortable road option. Avoid driving during Shahi Snan days — park outside Nashik and use shuttles.",
+    "tips_hi": "कुंभ 2027 में भीड़ के कारण यात्रा समय बढ़ेगा। ट्रेन/बस सप्ताह पहले बुक करें। शिवनेरी AC बस सबसे आरामदायक। शाही स्नान पर गाड़ी न चलाएँ — बाहर पार्क करें, शटल लें।"
+  },
+  {
+    "id": "route_pune_nashik",
+    "route": "Pune to Nashik",
+    "route_hi": "पुणे से नासिक",
+    "distance_km": 210,
+    "category": "Intercity Route",
+    "modes": [
+      {
+        "mode": "Bus (MSRTC and Private)",
+        "details_en": "No direct train connects Pune and Nashik, making road travel the primary option.\n\nMSRTC Buses:\n- Shivneri (AC Volvo): Every 1-2 hours from Pune Shivajinagar ST / Swargate. Duration: 4.5-5.5 hours. Fare: Rs 500-700.\n- Shivshahi (Semi-luxury): Frequent departures. Duration: 5-6 hours. Fare: Rs 300-450.\n- Ordinary: Very frequent. Duration: 5.5-7 hours. Fare: Rs 250-350.\n\nTwo main road routes:\n1. Via Ahmednagar: Pune → Shirur → Ahmednagar → Sinnar → Nashik (220 km). Wider, flatter road. Most buses take this route.\n2. Via Sangamner: Pune → Narayangaon → Sangamner → Sinnar → Nashik (200 km). More scenic through the Western Ghats.\n\nPrivate Operators: Neeta, VRL, Purple Travels operate AC buses. Fare: Rs 500-900. Book on RedBus.",
+        "details_hi": "पुणे-नासिक सीधी ट्रेन नहीं — सड़क मार्ग। शिवनेरी (AC): 4.5-5.5 घंटे, 500-700 रुपये। शिवशाही: 300-450 रुपये। साधारण: 250-350 रुपये। दो मार्ग: अहमदनगर से (220 किमी) या संगमनेर से (200 किमी)।",
+        "duration": "4.5-6 hours",
+        "cost": "Rs 250-700"
+      },
+      {
+        "mode": "Car",
+        "details_en": "Pune to Nashik by car: 200-220 km, 4-5 hours.\n\nRoute 1 (via Sinnar): Pune → NH-60 → Narayangaon → Sangamner → Sinnar → Nashik. 200 km, generally good road condition.\nRoute 2 (via Ahmednagar): Pune → Shirur → Ahmednagar → Sinnar → Nashik. 220 km, wider roads, more highway-like.\n\nBoth routes pass through agricultural landscapes, small towns, and the Deccan Plateau. Fuel cost: Rs 1000-1500. Tolls: Rs 200-300.",
+        "details_hi": "कार: 200-220 किमी, 4-5 घंटे। मार्ग 1: सिन्नर होकर (200 किमी)। मार्ग 2: अहमदनगर होकर (220 किमी)। ईंधन 1000-1500 रुपये, टोल 200-300 रुपये।",
+        "duration": "4-5 hours",
+        "cost": "Rs 1200-1800 (fuel + tolls)"
+      }
+    ],
+    "tips_en": "Start early to avoid traffic in both cities. The via-Sinnar route is shorter and more scenic. No direct train — bus is the best option for non-drivers.",
+    "tips_hi": "सुबह जल्दी निकलें। सिन्नर मार्ग छोटा और सुंदर। सीधी ट्रेन नहीं — बस सबसे अच्छा विकल्प।"
+  },
+  {
+    "id": "route_delhi_nashik",
+    "route": "Delhi to Nashik",
+    "route_hi": "दिल्ली से नासिक",
+    "distance_km": 1400,
+    "category": "Intercity Route",
+    "modes": [
+      {
+        "mode": "Train",
+        "details_en": "No direct express train from Delhi to Nashik Road. Options:\n\n1. Via Mumbai: Take Rajdhani/Duronto/August Kranti from Delhi to Mumbai CST or Mumbai Central (16-20 hours), then local train or Panchavati Express to Nashik Road (3.5 hours). Total: ~20-24 hours.\n\n2. Via Manmad: Some trains from Delhi to South India stop at Manmad Junction (60 km from Nashik). From Manmad, take a local train or bus to Nashik (1.5 hours). Trains stopping at Manmad include the Devagiri Express (Hazur Sahib Nanded bound). Check IRCTC for current schedules.\n\n3. Via Jaipur/Ahmedabad route: Some trains connecting North India to Maharashtra pass through or near Nashik's rail network.\n\nDuring Kumbh 2027, special trains from Delhi to Nashik Road are expected to be announced by Indian Railways.",
+        "details_hi": "दिल्ली से नासिक सीधी एक्सप्रेस ट्रेन नहीं। विकल्प: 1) मुंबई होकर — राजधानी/दुरंतो दिल्ली-मुंबई (16-20 घंटे), फिर मुंबई-नासिक (3.5 घंटे)। 2) मनमाड होकर — कुछ दक्षिण भारत ट्रेनें मनमाड (नासिक से 60 किमी) रुकती हैं। कुंभ 2027 में विशेष ट्रेनें अपेक्षित।",
+        "duration": "20-28 hours (total)",
+        "cost": "Rs 1500-4000 (depending on class)"
+      },
+      {
+        "mode": "Flight",
+        "details_en": "Fly from Delhi (DEL) to Mumbai (BOM) — multiple daily flights, 2 hours, Rs 3000-8000. Then travel by road/rail from Mumbai to Nashik (3-4 hours). Some airlines may operate Delhi to Nashik Ozar (ISK) flights, especially during Kumbh — check current schedules.\n\nTotal travel time: 6-8 hours (including transit).",
+        "details_hi": "दिल्ली से मुंबई उड़ान (2 घंटे, 3000-8000 रुपये), फिर मुंबई से नासिक सड़क/रेल (3-4 घंटे)। कुंभ में दिल्ली-नासिक ओझर उड़ानें संभव।",
+        "duration": "6-8 hours (total)",
+        "cost": "Rs 3000-10000"
+      }
+    ],
+    "tips_en": "Flying to Mumbai and then road/rail to Nashik is the fastest option. For budget travel, train to Mumbai + bus to Nashik works well. Check for special Kumbh trains.",
+    "tips_hi": "मुंबई उड़ान + सड़क/रेल सबसे तेज। बजट: ट्रेन मुंबई + बस नासिक। कुंभ विशेष ट्रेनें जाँचें।"
+  },
+  {
+    "id": "route_hyderabad_nashik",
+    "route": "Hyderabad to Nashik",
+    "route_hi": "हैदराबाद से नासिक",
+    "distance_km": 590,
+    "category": "Intercity Route",
+    "modes": [
+      {
+        "mode": "Train",
+        "details_en": "Devagiri Express (17057/17058): The primary train connecting Hyderabad (Secunderabad) to Nashik Road via Aurangabad and Manmad. Daily service. Duration: approximately 12-14 hours. Departs Secunderabad evening, arrives Nashik Road next morning — convenient overnight journey. Sleeper, AC 3-Tier, AC 2-Tier options.\n\nOther options include trains to Manmad Junction, then connecting to Nashik.\n\nDuring Kumbh 2027, special trains from Hyderabad/Secunderabad to Nashik Road are expected.",
+        "details_hi": "देवगिरी एक्सप्रेस: सिकंदराबाद से नासिक रोड, दैनिक, 12-14 घंटे। शाम रवाना, सुबह पहुँच — रात्रि यात्रा। स्लीपर और AC विकल्प। कुंभ में विशेष ट्रेनें अपेक्षित।",
+        "duration": "12-14 hours",
+        "cost": "Rs 500-1500"
+      },
+      {
+        "mode": "Bus",
+        "details_en": "MSRTC and TSRTC (Telangana) operate buses on the Hyderabad-Nashik route. Private operators (VRL, SRS, Neeta) run AC sleeper buses. Duration: 10-12 hours. Fare: Rs 700-1500. Overnight buses are most practical.",
+        "details_hi": "MSRTC और TSRTC बसें। निजी AC स्लीपर 700-1500 रुपये, 10-12 घंटे। रात्रि बस सबसे व्यावहारिक।",
+        "duration": "10-12 hours",
+        "cost": "Rs 700-1500"
+      },
+      {
+        "mode": "Flight",
+        "details_en": "Fly Hyderabad (HYD) to Mumbai (BOM), 1.5 hours, then road/rail to Nashik. Or check for direct flights to Nashik Ozar if available. Total: 5-7 hours.",
+        "details_hi": "हैदराबाद-मुंबई उड़ान (1.5 घंटे), फिर नासिक। या नासिक ओझर सीधी उड़ान जाँचें।",
+        "duration": "5-7 hours (via Mumbai)",
+        "cost": "Rs 3000-8000"
+      }
+    ],
+    "tips_en": "Devagiri Express overnight is the most convenient and affordable option. Book Sleeper or AC class for comfort.",
+    "tips_hi": "देवगिरी एक्सप्रेस रात्रि सबसे सुविधाजनक। स्लीपर या AC बुक करें।"
+  },
+  {
+    "id": "route_aurangabad_nashik",
+    "route": "Aurangabad to Nashik",
+    "route_hi": "औरंगाबाद से नासिक",
+    "distance_km": 190,
+    "category": "Intercity Route",
+    "modes": [
+      {
+        "mode": "Bus",
+        "details_en": "MSRTC buses from Aurangabad CBS to Nashik CBS. Frequency: Every 1-2 hours. Duration: 4-5 hours via Shirdi/Sinnar route. Fare: Rs 200-400 (ordinary to semi-luxury). Private buses also available. The route passes through Shirdi, making it possible to combine Aurangabad (Ajanta/Ellora) + Shirdi + Nashik in a multi-city trip.",
+        "details_hi": "औरंगाबाद CBS से नासिक CBS — हर 1-2 घंटे MSRTC बस। 4-5 घंटे। 200-400 रुपये। शिर्डी होकर मार्ग — औरंगाबाद + शिर्डी + नासिक संयोजित यात्रा संभव।",
+        "duration": "4-5 hours",
+        "cost": "Rs 200-400"
+      },
+      {
+        "mode": "Car",
+        "details_en": "190 km via Shirdi-Sinnar route. 3.5-4.5 hours. Good highway condition for most of the route. Passes through Shirdi — stop for darshan if time permits.",
+        "details_hi": "190 किमी, शिर्डी-सिन्नर मार्ग। 3.5-4.5 घंटे। शिर्डी रुक सकते हैं।",
+        "duration": "3.5-4.5 hours",
+        "cost": "Rs 1000-1500 (fuel + tolls)"
+      }
+    ],
+    "tips_en": "Combine with Ajanta/Ellora (Aurangabad) and Shirdi for a comprehensive pilgrimage-tourism circuit. Bus is the most practical option.",
+    "tips_hi": "अजंता/एलोरा (औरंगाबाद) और शिर्डी के साथ संयोजित करें। बस सबसे व्यावहारिक।"
+  },
+  {
+    "id": "route_shirdi_nashik",
+    "route": "Shirdi to Nashik",
+    "route_hi": "शिर्डी से नासिक",
+    "distance_km": 90,
+    "category": "Intercity Route",
+    "modes": [
+      {
+        "mode": "Bus",
+        "details_en": "MSRTC buses from Shirdi bus stand to Nashik CBS. Frequency: Every 30-60 minutes. Duration: 2-2.5 hours. Fare: Rs 100-200. Shivshahi (semi-luxury) and ordinary buses available. The route passes through flat agricultural countryside.",
+        "details_hi": "शिर्डी बस स्टैंड से नासिक CBS — हर 30-60 मिनट। 2-2.5 घंटे। 100-200 रुपये।",
+        "duration": "2-2.5 hours",
+        "cost": "Rs 100-200"
+      },
+      {
+        "mode": "Shared Taxi/Car",
+        "details_en": "Shared taxis (Innova/Ertiga) from Shirdi to Nashik: Rs 200-300 per seat. Private taxi: Rs 1500-2500 one way. Duration: 1.5-2 hours. Available at Shirdi bus stand and near temple complex.",
+        "details_hi": "शेयर टैक्सी: 200-300 रुपये/सीट। निजी टैक्सी: 1500-2500 रुपये। 1.5-2 घंटे।",
+        "duration": "1.5-2 hours",
+        "cost": "Rs 200-300 (shared), Rs 1500-2500 (private)"
+      }
+    ],
+    "tips_en": "Many pilgrims combine Shirdi (Sai Baba) and Nashik (Kumbh) in a single trip. The two cities are well-connected and close enough for a day trip.",
+    "tips_hi": "शिर्डी (साईं बाबा) और नासिक (कुंभ) एक यात्रा में संयोजित। दोनों निकट हैं — दिन यात्रा संभव।"
+  },
+  {
+    "id": "route_within_nashik",
+    "route": "Within Nashik City — Local Transport Guide",
+    "route_hi": "नासिक शहर के भीतर — स्थानीय परिवहन गाइड",
+    "distance_km": 0,
+    "category": "Local Transport",
+    "modes": [
+      {
+        "mode": "Auto-Rickshaw",
+        "details_en": "Auto-rickshaws are the most common mode of local transport in Nashik. Key information:\n\n- All autos are metered but drivers often refuse to go by meter, especially for longer distances or to tourist areas. Negotiate the fare before boarding.\n- Approximate fares: CBS to Panchavati/Ramkund: Rs 30-50. CBS to Nashik Road Station: Rs 60-80. Nashik Road Station to Panchavati: Rs 80-100. CBS to Gangapur Dam/Wineries: Rs 100-150. CBS to Trimbakeshwar (shared): Rs 50-60.\n- Pre-paid auto counters at Nashik Road Railway Station — use these to avoid overcharging.\n- During Kumbh, auto fares will increase. Government may set regulated Kumbh fares.\n- Shared autos run on fixed routes at lower fares. Ask locals for shared auto points.\n- Color: Black and yellow body with green stripe.",
+        "details_hi": "ऑटो-रिक्शा सबसे आम — मीटर है लेकिन अक्सर मना करते हैं, पहले किराया तय करें। CBS-रामकुंड: 30-50, CBS-स्टेशन: 60-80, स्टेशन-पंचवटी: 80-100। नासिक रोड स्टेशन पर प्री-पेड काउंटर।"
+      },
+      {
+        "mode": "City Bus (MSRTC/NMC)",
+        "details_en": "Nashik has a city bus network operated by MSRTC and NMC. Key routes:\n- Route connecting CBS to Panchavati, Nashik Road Station, MIDC Ambad, Gangapur Road, and other areas.\n- Fares are very low (Rs 5-20 depending on distance).\n- Buses can be crowded, especially during rush hours.\n- Frequency varies — main routes every 10-15 minutes, peripheral routes every 20-30 minutes.\n- Not the most tourist-friendly due to Marathi-only signage and irregular stops. Best for budget travelers who can ask locals for help.",
+        "details_hi": "MSRTC/NMC सिटी बस — CBS से पंचवटी, स्टेशन, MIDC, गंगापुर रोड। किराया 5-20 रुपये। भीड़ हो सकती है। मराठी साइनबोर्ड। बजट यात्रियों के लिए।"
+      },
+      {
+        "mode": "Ola/Uber/App-based Cabs",
+        "details_en": "Ola and Uber are available in Nashik. Booking through the apps works for most of the city. Wait times can be higher than Mumbai/Pune. Good option for airport transfers, winery visits, and Trimbakeshwar day trips. Cost: Slightly higher than autos but AC and comfortable. Also useful for outstation trips (Shirdi, Trimbakeshwar, etc.).",
+        "details_hi": "ओला और उबर नासिक में उपलब्ध। ऐप से बुकिंग। प्रतीक्षा समय मुंबई/पुणे से अधिक। एयरपोर्ट, वाइनरी, त्र्यंबकेश्वर के लिए अच्छा।"
+      },
+      {
+        "mode": "E-Rickshaw",
+        "details_en": "E-rickshaws (battery-powered three-wheelers) are increasingly common in Nashik, especially for short distances within the old city, Panchavati area, and around CBS. Fare: Rs 10-30 for short hops. Slower but economical and eco-friendly.",
+        "details_hi": "ई-रिक्शा पुराने शहर, पंचवटी और CBS के आसपास — 10-30 रुपये। धीमी लेकिन किफायती।"
+      },
+      {
+        "mode": "Walking",
+        "details_en": "Within Panchavati, walking is the best way to explore. All major temples and ghats (Kalaram Mandir, Ramkund, Sita Gufa, Naroshankar, etc.) are within 1 km of each other. The ghat walk from Ramkund to Tapovan (3 km) is a scenic pilgrimage route along the Godavari. Wear comfortable shoes — some ghat areas have uneven stone surfaces.",
+        "details_hi": "पंचवटी में पैदल सबसे अच्छा — सभी मंदिर और घाट 1 किमी के भीतर। रामकुंड से तपोवन (3 किमी) सुंदर पैदल मार्ग। आरामदायक जूते पहनें।"
+      }
+    ],
+    "tips_en": "Use pre-paid auto at the railway station. Within Panchavati, walk. For wineries and Trimbakeshwar, hire a car/cab for the day (Rs 1500-2500). During Kumbh, the core Panchavati area will be pedestrian-only — no vehicles allowed.",
+    "tips_hi": "रेलवे स्टेशन पर प्री-पेड ऑटो। पंचवटी में पैदल। वाइनरी/त्र्यंबकेश्वर: दिन भर कार (1500-2500 रुपये)। कुंभ में पंचवटी पैदल-यात्री क्षेत्र — वाहन वर्जित।"
+  },
+  {
+    "id": "route_nashik_trimbakeshwar",
+    "route": "Nashik to Trimbakeshwar",
+    "route_hi": "नासिक से त्र्यंबकेश्वर",
+    "distance_km": 28,
+    "category": "Pilgrimage Route",
+    "modes": [
+      {
+        "mode": "Bus (MSRTC)",
+        "details_en": "MSRTC operates the most frequent service between Nashik and Trimbakeshwar. Buses depart from Nashik CBS every 10-15 minutes throughout the day (5 AM to 9 PM). Duration: 40-50 minutes. Fare: Rs 35-45. The buses are ordinary (non-AC) and can be crowded, especially on weekends and Mondays (Shiva's day).",
+        "details_hi": "नासिक CBS से त्र्यंबकेश्वर — हर 10-15 मिनट बस (सुबह 5 से रात 9)। 40-50 मिनट। 35-45 रुपये। सोमवार और सप्ताहांत भीड़।",
+        "duration": "40-50 minutes",
+        "cost": "Rs 35-45"
+      },
+      {
+        "mode": "Shared Auto",
+        "details_en": "Shared auto-rickshaws to Trimbakeshwar depart from near Nashik CBS when full (6-8 passengers). Fare: Rs 50-60 per person. Duration: 30-40 minutes. Faster than buses as they don't stop en route. Available throughout the day.",
+        "details_hi": "शेयर ऑटो CBS के पास से — भरने पर रवाना। 50-60 रुपये/व्यक्ति। 30-40 मिनट।",
+        "duration": "30-40 minutes",
+        "cost": "Rs 50-60"
+      },
+      {
+        "mode": "Car/Taxi",
+        "details_en": "By car: Take NH-3 (Nashik-Agra Highway) towards Mumbai/Trimbak. At Trimbak Phata (junction), turn right towards Trimbakeshwar. Well-signposted route. 28 km, 30-40 minutes. Parking available about 500 meters from the temple (free to Rs 30). Taxi/cab: Rs 400-600 one way, Rs 800-1200 round trip with waiting.",
+        "details_hi": "कार: NH-3 पर, त्र्यंबक फाटा से दाएँ। 28 किमी, 30-40 मिनट। पार्किंग मंदिर से 500 मीटर। टैक्सी: एक तरफ 400-600, आने-जाने 800-1200 रुपये।",
+        "duration": "30-40 minutes",
+        "cost": "Rs 400-1200 (taxi)"
+      }
+    ],
+    "tips_en": "Buses are frequent and cheap — the best option for most travelers. Visit early morning (6 AM departure) to avoid crowds at the temple. During Kumbh Shahi Snan, special buses and traffic arrangements will be in place — expect longer travel times.",
+    "tips_hi": "बसें बार-बार और सस्ती। सुबह 6 बजे की बस से मंदिर में कम भीड़। कुंभ शाही स्नान पर विशेष बसें और यातायात व्यवस्था।"
+  },
+  {
+    "id": "route_nashik_saptashrungi",
+    "route": "Nashik to Saptashrungi Devi",
+    "route_hi": "नासिक से सप्तशृंगी देवी",
+    "distance_km": 60,
+    "category": "Pilgrimage Route",
+    "modes": [
+      {
+        "mode": "Bus",
+        "details_en": "MSRTC buses from Nashik CBS to Kalwan or Vani (Saptashrungi base). Frequency: 3-5 buses per day (check current schedule). Duration: 2-2.5 hours. Fare: Rs 80-120. Some buses go directly to Vani; others require change at Kalwan. From Kalwan, shared jeeps/autos to Vani (Rs 20-30). The road is through hilly terrain and can be winding.",
+        "details_hi": "नासिक CBS से कळवण/वणी बस — दिन में 3-5 बसें। 2-2.5 घंटे। 80-120 रुपये। कुछ कळवण पर बदलनी पड़ती है। कळवण से वणी शेयर जीप/ऑटो 20-30 रुपये।",
+        "duration": "2-2.5 hours",
+        "cost": "Rs 80-120"
+      },
+      {
+        "mode": "Car/Taxi",
+        "details_en": "60 km via Nashik-Kalwan-Vani road through Dindori. 1.5-2 hours by car. Road is generally good but narrow in sections through the hills. Taxi: Rs 1200-2000 round trip with waiting. The drive through the Sahyadri foothills is scenic, especially during monsoon.",
+        "details_hi": "कार: 60 किमी, दिंडोरी-कळवण-वणी मार्ग। 1.5-2 घंटे। टैक्सी: 1200-2000 रुपये आने-जाने। पहाड़ी ड्राइव मानसून में सुंदर।",
+        "duration": "1.5-2 hours",
+        "cost": "Rs 1200-2000 (taxi round trip)"
+      }
+    ],
+    "tips_en": "Start early as buses are infrequent. Car/taxi gives more flexibility. During Navratri, special buses are often added. The 108 steps to the temple require moderate fitness — doli (palanquin) available for Rs 500-1000.",
+    "tips_hi": "सुबह जल्दी निकलें — बसें कम। कार/टैक्सी अधिक लचीला। नवरात्रि में विशेष बसें। 108 सीढ़ियाँ — डोली 500-1000 रुपये।"
+  },
+  {
+    "id": "route_nashik_sinnar",
+    "route": "Nashik to Sinnar (Gondeshwar Temple)",
+    "route_hi": "नासिक से सिन्नर (गोंदेश्वर मंदिर)",
+    "distance_km": 30,
+    "category": "Day Trip Route",
+    "modes": [
+      {
+        "mode": "Bus",
+        "details_en": "MSRTC buses from Nashik CBS to Sinnar on the Nashik-Pune highway. Very frequent — every 15-30 minutes. Duration: 40-50 minutes. Fare: Rs 30-40. From Sinnar bus stand, the Gondeshwar temple is about 1 km — walk or take an auto (Rs 20).",
+        "details_hi": "नासिक CBS से सिन्नर — हर 15-30 मिनट। 40-50 मिनट। 30-40 रुपये। सिन्नर बस स्टैंड से मंदिर 1 किमी पैदल या ऑटो 20 रुपये।",
+        "duration": "40-50 minutes",
+        "cost": "Rs 30-40"
+      },
+      {
+        "mode": "Car",
+        "details_en": "30 km on NH-50 (Nashik-Pune highway). 30-40 minutes. Straightforward drive. Can be combined with a day trip to Ozar Ashtavinayak (further 20 km from Sinnar).",
+        "details_hi": "NH-50 पर 30 किमी। 30-40 मिनट। ओझर अष्टविनायक (सिन्नर से 20 किमी) के साथ संयोजित करें।",
+        "duration": "30-40 minutes",
+        "cost": "Rs 400-600 (taxi one way)"
+      }
+    ],
+    "tips_en": "Easy half-day trip. Combine Gondeshwar Temple (Sinnar) + Ozar Ashtavinayak for a full day excursion. Architecture lovers should allow at least 1 hour at Gondeshwar.",
+    "tips_hi": "आसान अर्ध-दिवसीय यात्रा। गोंदेश्वर + ओझर अष्टविनायक = पूर्ण दिन। वास्तुकला प्रेमी गोंदेश्वर में 1 घंटा दें।"
+  },
+  {
+    "id": "route_nashik_igatpuri",
+    "route": "Nashik to Igatpuri",
+    "route_hi": "नासिक से इगतपुरी",
+    "distance_km": 45,
+    "category": "Day Trip Route",
+    "modes": [
+      {
+        "mode": "Train",
+        "details_en": "All trains between Nashik Road and Mumbai stop at Igatpuri. Duration: 30-50 minutes by express train. Fare: Rs 15-30 (general). Multiple trains daily. Igatpuri is the station where trains add/remove banking engines for the Kasara Ghat climb.",
+        "details_hi": "नासिक रोड-मुंबई सभी ट्रेनें इगतपुरी रुकती हैं। 30-50 मिनट। 15-30 रुपये। कसारा घाट के लिए यहाँ बैंकिंग इंजन लगाए जाते हैं।",
+        "duration": "30-50 minutes",
+        "cost": "Rs 15-30"
+      },
+      {
+        "mode": "Bus",
+        "details_en": "MSRTC buses from Nashik CBS towards Mumbai all pass through Igatpuri. Frequency: Every 30 minutes. Duration: 1-1.5 hours. Fare: Rs 50-70.",
+        "details_hi": "नासिक से मुंबई की सभी बसें इगतपुरी से गुजरती हैं। 1-1.5 घंटे। 50-70 रुपये।",
+        "duration": "1-1.5 hours",
+        "cost": "Rs 50-70"
+      },
+      {
+        "mode": "Car",
+        "details_en": "45 km on NH-3 towards Mumbai. 45 minutes-1 hour. The drive passes through scenic landscape. From Igatpuri, further day trips to Bhandardara (40 km), Kalsubai (35 km from Igatpuri), and Vihigaon waterfall.",
+        "details_hi": "NH-3 पर 45 किमी, 45 मिनट-1 घंटा। इगतपुरी से भंडारदरा (40 किमी), कलसुबाई (35 किमी)।",
+        "duration": "45 min - 1 hour",
+        "cost": "Rs 500-800 (taxi one way)"
+      }
+    ],
+    "tips_en": "Igatpuri is the gateway to Bhandardara, Kalsubai, and the Vipassana center. Train is the fastest and cheapest option. The famous Igatpuri vada pav at the station is a must-try.",
+    "tips_hi": "इगतपुरी — भंडारदरा, कलसुबाई, विपश्यना केंद्र का प्रवेश द्वार। ट्रेन सबसे तेज और सस्ता। इगतपुरी स्टेशन का वड़ा पाव प्रसिद्ध।"
+  },
+  {
+    "id": "route_railway_stations",
+    "route": "Railway Stations in Nashik District",
+    "route_hi": "नासिक जिले में रेलवे स्टेशन",
+    "distance_km": 0,
+    "category": "Railway Infrastructure",
+    "modes": [
+      {
+        "mode": "Information",
+        "details_en": "Key railway stations in Nashik district on the Central Railway Mumbai-Bhusawal line:\n\n1. **Nashik Road (NK):** Main station, 8 km from city center, Deolali area. 5 platforms. All express and superfast trains stop here. Retiring rooms, food stalls, pre-paid auto counter.\n\n2. **Devlali (DI):** Adjacent to Nashik Road, in the cantonment area. Some local trains stop. Close to the Artillery Centre.\n\n3. **Igatpuri (IGP):** Major junction 45 km from Nashik. All trains stop for engine changes (ghat section). Important for Mumbai connections.\n\n4. **Ghoti (GHTI):** Small station between Nashik and Igatpuri, about 25 km from Nashik. Limited stops.\n\n5. **Kasara (KSRA):** The last station on the Mumbai suburban rail network and the base of the Kasara Ghat. Mumbai locals terminate here. Important gateway for travelers from Mumbai who may connect to Nashik-bound trains or buses.\n\n6. **Manmad Junction (MMR):** 60 km from Nashik, on the main Mumbai-Delhi line. Important junction where the Nashik branch line meets the main line. Some long-distance trains that don't come to Nashik Road stop at Manmad. Connecting trains/buses from Manmad to Nashik available.\n\n7. **Lasalgaon (LSG):** In the onion-growing belt, about 50 km east of Nashik. Limited passenger services.\n\nDuring Kumbh 2027, Nashik Road station will be the primary rail gateway. Enhanced facilities, additional temporary platforms, special Kumbh trains, and extensive crowd management are expected.",
+        "details_hi": "नासिक जिले के रेलवे स्टेशन:\n1. नासिक रोड (NK): मुख्य, 5 प्लेटफॉर्म\n2. देवळाली (DI): छावनी क्षेत्र\n3. इगतपुरी (IGP): प्रमुख जंक्शन, इंजन बदलाव\n4. घोटी (GHTI): छोटा स्टेशन\n5. कसारा (KSRA): मुंबई लोकल का अंतिम, घाट का आधार\n6. मनमाड जंक्शन (MMR): मुंबई-दिल्ली मेन लाइन, 60 किमी\n\nकुंभ 2027 में नासिक रोड मुख्य प्रवेश — विशेष ट्रेनें और बेहतर सुविधाएँ।"
+      }
+    ],
+    "tips_en": "Always note which station your train arrives at — Nashik Road is the main one but some trains go to Manmad. From Kasara, you can take a Mumbai suburban local to reach CST/Dadar cheaply.",
+    "tips_hi": "ट्रेन किस स्टेशन पर पहुँचती है जाँचें — नासिक रोड मुख्य। कसारा से मुंबई लोकल CST/दादर सस्ती।"
+  }
+]

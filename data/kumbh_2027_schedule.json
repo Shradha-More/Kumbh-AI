@@ -1,0 +1,133 @@
+{
+  "event": "Nashik Simhastha Kumbh Mela 2027",
+  "event_hi": "नाशिक सिंहस्थ कुंभ मेला 2027",
+  "event_mr": "नाशिक सिंहस्थ कुंभ मेळा 2027",
+  "event_gu": "નાશિક સિંહસ્થ કુંભ મેળો 2027",
+  "event_ta": "நாசிக் சிம்ஹஸ்த கும்பமேளா 2027",
+  "event_te": "నాసిక్ సింహస్థ కుంభమేళా 2027",
+  "event_kn": "ನಾಸಿಕ್ ಸಿಂಹಸ್ಥ ಕುಂಭಮೇಳ 2027",
+  "event_ml": "നാസിക് സിംഹസ്ഥ കുംഭമേള 2027",
+  "location": "Nashik, Maharashtra, India",
+  "river": "Godavari",
+  "year_cycle": "Every 12 years when Jupiter enters Leo (Simha Rashi)",
+  "estimated_pilgrims": "30-35 million over the full duration",
+  "duration_days": 45,
+  "main_period": {
+    "start": "2027-07-15",
+    "end": "2027-08-29",
+    "note": "Exact dates subject to astronomical calculations and official Maharashtra government announcement"
+  },
+  "shahi_snan": [
+    {
+      "id": 1,
+      "name": "Shravani Purnima / Raksha Bandhan Snan",
+      "name_hi": "श्रावणी पूर्णिमा / रक्षा बंधन शाही स्नान",
+      "name_mr": "श्रावणी पौर्णिमा / रक्षाबंधन शाही स्नान",
+      "name_gu": "શ્રાવણ પૂર્ણિમા / રક્ષાબંધન શાહી સ્નાન",
+      "date_approx": "2027-07-21",
+      "significance": "First major royal bathing — all 13 Akharas participate",
+      "significance_hi": "पहला प्रमुख शाही स्नान — सभी 13 अखाड़े भाग लेते हैं",
+      "ghats": ["Ramkund", "Kushavart (Trimbak)", "Godavari Ghat"],
+      "crowd_level": "Very High",
+      "estimated_pilgrims": "5-6 million"
+    },
+    {
+      "id": 2,
+      "name": "Naga Panchami Snan",
+      "name_hi": "नागपंचमी शाही स्नान",
+      "name_mr": "नागपंचमी शाही स्नान",
+      "name_gu": "નાગ પંચમી શાહી સ્નાન",
+      "date_approx": "2027-07-26",
+      "significance": "Naga Sadhus take the holy dip in a grand procession",
+      "significance_hi": "नागा साधु भव्य जुलूस में पवित्र डुबकी लगाते हैं",
+      "ghats": ["Ramkund", "Godavari Ghat"],
+      "crowd_level": "High",
+      "estimated_pilgrims": "3-4 million"
+    },
+    {
+      "id": 3,
+      "name": "Shravani Amavasya Snan",
+      "name_hi": "श्रावण अमावस्या शाही स्नान",
+      "name_mr": "श्रावण अमावस्या शाही स्नान",
+      "date_approx": "2027-08-05",
+      "significance": "Amavasya (new moon) bathing — ancestors honored",
+      "significance_hi": "अमावस्या स्नान — पितृ तर्पण होता है",
+      "ghats": ["Ramkund", "Astivahini Ghat"],
+      "crowd_level": "Very High",
+      "estimated_pilgrims": "6-8 million"
+    },
+    {
+      "id": 4,
+      "name": "Simhastha Purnima — Main Kumbh Snan (Maha Kumbh Snan)",
+      "name_hi": "सिंहस्थ पूर्णिमा — मुख्य कुंभ स्नान (महा कुंभ स्नान)",
+      "name_mr": "सिंहस्थ पौर्णिमा — मुख्य कुंभ स्नान (महा कुंभ स्नान)",
+      "name_gu": "સિંહસ્થ પૂર્ણિમા — મુખ્ય કુંભ સ્નાન",
+      "name_ta": "சிம்ஹஸ்த பௌர்ணமி — முக்கிய கும்ப ஸ்நானம்",
+      "name_te": "సింహస్థ పూర్ణిమ — ప్రధాన కుంభ స్నానం",
+      "name_kn": "ಸಿಂಹಸ್ಥ ಪೂರ್ಣಿಮಾ — ಮುಖ್ಯ ಕುಂಭ ಸ್ನಾನ",
+      "name_ml": "സിംഹസ്ഥ പൗർണ്ണമി — പ്രധാന കുംഭ സ്നാനം",
+      "date_approx": "2027-08-20",
+      "significance": "THE most sacred bath — Jupiter in Leo + Full Moon. Missing this is considered a great loss for a devotee",
+      "significance_hi": "सबसे पवित्र स्नान — गुरु सिंह राशि में + पूर्णिमा। इसे छोड़ना बहुत बड़ी हानि मानी जाती है",
+      "ghats": ["Ramkund", "Kushavart (Trimbak)", "All Godavari Ghats"],
+      "crowd_level": "Extreme — highest of the Kumbh",
+      "estimated_pilgrims": "10-12 million in single day",
+      "akhara_procession_start": "03:00",
+      "bathing_window": "04:00 to 12:00",
+      "note": "Arrive previous night — roads closed 6 hours before snan"
+    },
+    {
+      "id": 5,
+      "name": "Bhadrapad Amavasya — Pitru Paksha Snan",
+      "name_hi": "भाद्रपद अमावस्या — पितृ पक्ष स्नान",
+      "name_mr": "भाद्रपद अमावस्या — पितृ पक्ष स्नान",
+      "date_approx": "2027-09-04",
+      "significance": "Pitru Paksha begins — ancestors' souls liberated with Godavari bath",
+      "significance_hi": "पितृ पक्ष प्रारंभ — गोदावरी में स्नान से पूर्वजों की आत्मा को मोक्ष मिलता है",
+      "ghats": ["Ramkund", "Astivahini Ghat"],
+      "crowd_level": "High",
+      "estimated_pilgrims": "4-5 million"
+    }
+  ],
+  "peshwai_processions": [
+    {
+      "akhara": "Juna Akhara (Largest Akhara)",
+      "akhara_hi": "जूना अखाड़ा",
+      "procession_date_approx": "2027-07-18",
+      "route": "Panchavati → Ramkund → Godavari Ghat",
+      "note": "Naga Sadhus march first — thousands of ash-covered sadhus"
+    },
+    {
+      "akhara": "Niranjani Akhara",
+      "akhara_hi": "निरंजनी अखाड़ा",
+      "procession_date_approx": "2027-07-19"
+    },
+    {
+      "akhara": "Mahanirvani Akhara",
+      "akhara_hi": "महानिर्वाणी अखाड़ा",
+      "procession_date_approx": "2027-07-19"
+    }
+  ],
+  "akhara_bathing_order": {
+    "note": "Order decided by Akhara Parishad. First right always goes to Shaiva Akharas then Vaishnava Akharas",
+    "shaiva_akharas": [
+      "Juna Akhara", "Mahanirvani Akhara", "Niranjani Akhara",
+      "Atal Akhara", "Agni Akhara", "Anand Akhara", "Avahan Akhara"
+    ],
+    "vaishnava_akharas": [
+      "Digambar Ani", "Nirvani Ani", "Nirmohi Ani"
+    ],
+    "udasin_akharas": [
+      "Panchayati Bada Udasin Akhara", "Panchayati Naya Udasin Akhara", "Nirmal Akhara"
+    ]
+  },
+  "general_info": {
+    "best_time_to_visit": "Early morning 4am-8am for bathing to avoid extreme crowds",
+    "best_time_hi": "स्नान के लिए सुबह 4-8 बजे जाएं — कम भीड़ होती है",
+    "avoid_peak_hours": "10am-4pm on Shahi Snan days",
+    "dress_code": "Traditional attire preferred, modest clothing mandatory at ghats",
+    "photography": "No photography of Naga Sadhus without permission",
+    "alcohol_tobacco": "Strictly prohibited throughout the Kumbh area",
+    "footwear": "Remove before entering ghats and temples"
+  }
+}

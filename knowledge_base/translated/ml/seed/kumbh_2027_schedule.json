@@ -1,0 +1,30 @@
+[
+  {
+    "id": "3174f9a818ad0ae0",
+    "text": ": Shravani Purnima / Raksha Bandhan Snan — First major royal bathing — all 13 Akharas participate\n: Naga Panchami Snan — Naga Sadhus take the holy dip in a grand procession\n: Shravani Amavasya Snan — Amavasya (new moon) bathing — ancestors honored\n: Simhastha Purnima — Main Kumbh Snan (Maha Kumbh Snan) — THE most sacred bath — Jupiter in Leo + Full Moon. Missing this is considered a great loss for a devotee\n: Bhadrapad Amavasya — Pitru Paksha Snan — Pitru Paksha begins — ancestors' souls liberated with Godavari bath",
+    "language": "ml",
+    "domain": "schedule",
+    "source_url": "seed:kumbh_schedule",
+    "chunk_index": 0,
+    "total_chunks": 2,
+    "parent_doc_id": "17d02ea5a94f",
+    "word_count": 94,
+    "translated_from": "en",
+    "translation_model": "indictrans2",
+    "original_text": ": Shravani Purnima / Raksha Bandhan Snan — First major royal bathing — all 13 Akharas participate\n: Naga Panchami Snan — Naga Sadhus take the holy dip in a grand procession\n: Shravani Amavasya Snan — Amavasya (new moon) bathing — ancestors honored\n: Simhastha Purnima — Main Kumbh Snan (Maha Kumbh Snan) — THE most sacred bath — Jupiter in Leo + Full Moon. Missing this is considered a great loss for a devotee\n: Bhadrapad Amavasya — Pitru Paksha Snan — Pitru Paksha begins — ancestors' souls liberated with Godavari bath"
+  },
+  {
+    "id": "4846c63fd67ce73d",
+    "text": "Missing this is considered a great loss for a devotee\n: Bhadrapad Amavasya — Pitru Paksha Snan — Pitru Paksha begins — ancestors' souls liberated with Godavari bath",
+    "language": "ml",
+    "domain": "schedule",
+    "source_url": "seed:kumbh_schedule",
+    "chunk_index": 1,
+    "total_chunks": 2,
+    "parent_doc_id": "17d02ea5a94f",
+    "word_count": 28,
+    "translated_from": "en",
+    "translation_model": "indictrans2",
+    "original_text": "Missing this is considered a great loss for a devotee\n: Bhadrapad Amavasya — Pitru Paksha Snan — Pitru Paksha begins — ancestors' souls liberated with Godavari bath"
+  }
+]

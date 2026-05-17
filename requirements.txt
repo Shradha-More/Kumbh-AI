@@ -1,0 +1,99 @@
+# ============================================================
+# Nashik Kumbh Mela 2027 AI Assistant - Full Requirements
+# ============================================================
+# Install all: pip install -r requirements.txt
+# GPU (CUDA 12.1): pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
+# ============================================================
+
+# ---- FastAPI Backend ----
+fastapi==0.115.0
+uvicorn[standard]==0.32.0
+python-multipart==0.0.12
+pydantic==2.9.2
+httpx==0.27.2
+sse-starlette==2.1.3
+
+# ---- ASR (Speech to Text) ----
+# 1.0.3 depends on av<13 which triggers source builds on Python 3.13.
+faster-whisper==1.2.1
+# openai-whisper currently fails to build on Python 3.13 in isolated builds
+# (ModuleNotFoundError: pkg_resources). Keep it for <=3.12 only.
+openai-whisper==20240930; python_version < "3.13"
+ffmpeg-python==0.2.0
+
+# ---- TTS (Text to Speech) ----
+# Coqui TTS 0.22.0 supports Python <3.12
+TTS==0.22.0; python_version < "3.12"
+# Optional: Parler-TTS is not used by the current API service and can cause
+# resolver conflicts with pinned transformers/torch versions.
+# parler-tts==0.2.3
+gTTS==2.5.3
+edge-tts>=7.0.0
+pydub==0.25.1
+soundfile==0.12.1
+
+# ---- LLM Inference (choose one) ----
+# Option A: llama-cpp-python (GGUF files, CPU/GPU)
+# Can require local C/C++ toolchain on newer Python versions; Ollama remains fallback.
+llama-cpp-python==0.3.1; python_version < "3.13"
+# Option B: Ollama (run `ollama serve` separately)
+# No pip install needed — use REST API at localhost:11434
+
+# ---- RAG / Vector DB ----
+chromadb==0.5.20
+sentence-transformers==3.2.1
+# faiss 1.8.0 has no Python 3.13 wheels
+faiss-cpu==1.8.0; python_version < "3.13"
+faiss-cpu==1.13.2; python_version >= "3.13"
+# faiss-gpu==1.7.4  # Uncomment for GPU FAISS
+
+# ---- Embeddings ----
+transformers==4.46.3
+tokenizers==0.20.3
+
+# ---- Crawler ----
+scrapy==2.11.2
+playwright==1.48.0
+requests==2.32.3
+beautifulsoup4==4.12.3
+newspaper3k==0.2.8
+wikipedia-api==0.7.1
+overpy==0.7
+langdetect==1.0.9
+lxml==5.3.0
+
+# ---- Data Pipeline ----
+datasets==3.1.0
+datasketch==1.6.5
+tqdm==4.67.0
+# numpy 1.26.4 has no prebuilt wheels for Python 3.13
+numpy==1.26.4; python_version < "3.13"
+numpy==2.2.6; python_version >= "3.13"
+pandas==2.2.3
+regex==2024.9.11
+ftfy==6.3.1
+
+# ---- Translation ----
+# IndicTrans2 — install from source:
+# pip install git+https://github.com/AI4Bharat/IndicTrans2.git
+# indic-nlp-library==0.92
+sentencepiece==0.2.1
+sacremoses==0.1.1
+
+# ---- Training (QLoRA) ----
+torch==2.5.1
+transformers==4.46.3
+peft==0.13.2
+trl==0.12.1
+bitsandbytes==0.44.1
+accelerate==1.1.1
+# Unsloth for 2x faster training:
+# pip install unsloth  (separate install — see their docs)
+
+# ---- Utilities ----
+python-dotenv==1.0.1
+pyyaml==6.0.2
+aiofiles==24.1.0
+cachetools==5.5.0
+tenacity==9.0.0
+loguru==0.7.2

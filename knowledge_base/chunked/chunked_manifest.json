@@ -1,0 +1,38 @@
+{
+  "created_at": "2026-04-04T18:15:56.130452+00:00",
+  "total_docs": 1623,
+  "total_chunks": 6930,
+  "chunk_params": {
+    "target_min_words": 300,
+    "target_max_words": 500,
+    "overlap_words": 50
+  },
+  "language_breakdown": {
+    "en": 1398,
+    "hi": 3955,
+    "mr": 1194,
+    "gu": 97,
+    "ta": 91,
+    "te": 74,
+    "kn": 68,
+    "ml": 53
+  },
+  "domain_breakdown": {
+    "food": 208,
+    "emergency": 103,
+    "culture": 319,
+    "transport": 750,
+    "places": 1941,
+    "schedule": 304,
+    "accommodation": 3,
+    "mr.wikipedia.org": 67,
+    "ta.wikipedia.org": 25,
+    "en.wikipedia.org": 118,
+    "hi.wikipedia.org": 15,
+    "gu.wikipedia.org": 6,
+    "te.wikipedia.org": 22,
+    "ml.wikipedia.org": 16,
+    "kn.wikipedia.org": 17,
+    "general": 3016
+  }
+}

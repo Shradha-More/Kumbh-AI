@@ -1,0 +1,35 @@
+[
+  {
+    "id": "5add641745b38121",
+    "text": "dharamshalas: name: Kalaram Temple Dharmshala; cost: Free/Donation; capacity: 300; location: Panchavati, name: Juna Akhara Camp; cost: Free for pilgrims; note: Available during Kumbh period, name: Sikh Gurudwara Dharmshala; cost: Free; includes: Free langar meals, name: Marwari Dharamshala Nashik; cost: ₹100-200/night\nbudget_hotels: en: Budget hotels available in Panchavati and CBS Stand areas. Range: ₹500-1500/night. Book 3-4 months ahead for Kumbh period.; areas: Panchavati Road, CBS Stand, Sharanpur Road, College Road\nkumbh_tent_city: en: During Kumbh Mela, official Tent City is set up by Maharashtra Tourism near Tapovan area. AC and non-AC tents available. Book via Maharashtra Tourism website.; cost: ₹2000-8000 per night depending on category",
+    "language": "en",
+    "domain": "accommodation",
+    "source_url": "seed:ghats_and_transport:accommodation",
+    "chunk_index": 0,
+    "total_chunks": 3,
+    "parent_doc_id": "8d50a290a013",
+    "word_count": 103
+  },
+  {
+    "id": "957051052120d3fe",
+    "text": "AC and non-AC tents available. Book via Maharashtra Tourism website.; cost: ₹2000-8000 per night depending on category",
+    "language": "en",
+    "domain": "accommodation",
+    "source_url": "seed:ghats_and_transport:accommodation",
+    "chunk_index": 1,
+    "total_chunks": 3,
+    "parent_doc_id": "8d50a290a013",
+    "word_count": 17
+  },
+  {
+    "id": "2f6df879c0cd7e6d",
+    "text": "Book via Maharashtra Tourism website.; cost: ₹2000-8000 per night depending on category",
+    "language": "en",
+    "domain": "accommodation",
+    "source_url": "seed:ghats_and_transport:accommodation",
+    "chunk_index": 2,
+    "total_chunks": 3,
+    "parent_doc_id": "8d50a290a013",
+    "word_count": 12
+  }
+]

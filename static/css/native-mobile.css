@@ -1,0 +1,1058 @@
+/* ═══════════════════════════════════════════════════════════════
+   NATIVE MOBILE — PWA-grade native app experience
+   Safe areas, touch states, standalone mode, iOS/Android parity,
+   bottom sheets, collapsing headers, system UI integration
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ─── SAFE AREA TOKENS ─── */
+:root {
+  --sat: env(safe-area-inset-top, 0px);
+  --sar: env(safe-area-inset-right, 0px);
+  --sab: env(safe-area-inset-bottom, 0px);
+  --sal: env(safe-area-inset-left, 0px);
+  --nav-height: 48px;
+  --tab-height: 56px;
+  --input-bar-height: 60px;
+}
+
+
+/* ═══════════════════════════════════════════════════════════════
+   GLOBAL NATIVE BEHAVIORS
+   ═══════════════════════════════════════════════════════════════ */
+
+/* Prevent pull-to-refresh / overscroll bounce on the body (we handle it ourselves) */
+html {
+  overscroll-behavior-y: none;
+}
+
+body {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  overscroll-behavior-y: contain;
+}
+
+/* Prevent text selection on interactive elements */
+button, .action-card, .sos-card, .filter-chip, .lang-chip,
+.nav-link, .mobile-nav button, .helpline-item, .chat-welcome-chip,
+.place-head, .fb-type, .auth-lang-chip, .msg-play, .msg-map-btn,
+.chat-sidebar-item, .loc-option, .rp-option {
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/* Allow text selection on content areas */
+.msg-bubble, .place-detail p, .info-banner, .mpc-meta,
+.map-place-card p, .profile-info-row .val, .auth-field input,
+.chat-input, textarea {
+  -webkit-user-select: text;
+  user-select: text;
+}
+
+/* Disable double-tap zoom on interactive elements */
+button, a, .action-card, .sos-card, .filter-chip, .helpline-item,
+.nav-link, .mobile-nav button {
+  touch-action: manipulation;
+}
+
+/* Smooth font rendering */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+/* ═══════════════════════════════════════════════════════════════
+   MOBILE (<= 768px) — NATIVE APP LAYOUT
+   ═══════════════════════════════════════════════════════════════ */
+
+@media (max-width: 768px) {
+
+  /* ─── APP SHELL ─── */
+  html, body {
+    height: 100%;
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+  }
+
+  .app {
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* ─── NAVBAR (native status-bar aware) ─── */
+  .navbar {
+    padding-top: var(--sat);
+    height: calc(var(--nav-height) + var(--sat));
+    flex-shrink: 0;
+    position: relative;
+    z-index: 100;
+    /* Translucent blur like iOS navbar */
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    backdrop-filter: saturate(180%) blur(20px);
+  }
+
+  /* ─── BOTTOM TAB BAR (native tab bar) ─── */
+  .mobile-nav {
+    height: calc(var(--tab-height) + var(--sab)) !important;
+    padding-bottom: max(var(--sab), 6px) !important;
+    padding-top: 4px !important;
+    flex-shrink: 0;
+    z-index: 200;
+    /* iOS-style frosted glass */
+    background: rgba(255, 255, 255, 0.92) !important;
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    backdrop-filter: saturate(180%) blur(20px);
+    border-top: 0.5px solid rgba(0, 0, 0, 0.08) !important;
+    box-shadow: none !important;
+    /* Remove hide-on-scroll — always visible like native */
+    transform: none !important;
+    transition: none !important;
+  }
+
+  .mobile-nav.hidden {
+    transform: none !important;
+  }
+
+  .mobile-nav button {
+    flex: 1;
+    min-width: 0;
+    gap: 2px !important;
+    font-size: 9px !important;
+    font-weight: 500 !important;
+    padding: 2px 0 !important;
+    transition: color 0.15s ease, transform 0.15s ease !important;
+    position: relative;
+  }
+
+  .mobile-nav button i {
+    font-size: 22px !important;
+    transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+
+  .mobile-nav button.active i {
+    transform: scale(1.1);
+  }
+
+  /* Active indicator — iOS style pill */
+  .mobile-nav button.active::after {
+    width: 20px !important;
+    height: 3px !important;
+    border-radius: 1.5px !important;
+    top: -2px !important;
+    background: var(--saffron) !important;
+    transition: width 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+
+  /* Tap state for tab buttons */
+  .mobile-nav button:active {
+    transform: scale(0.85) !important;
+    transition-duration: 0.08s !important;
+  }
+
+  /* ─── PAGES (full-viewport, scrollable) ─── */
+  .page {
+    position: absolute;
+    top: calc(var(--nav-height) + var(--sat));
+    left: 0;
+    right: 0;
+    bottom: calc(var(--tab-height) + var(--sab));
+    overflow: hidden;
+    display: none !important;
+  }
+
+  .page.active {
+    display: flex !important;
+    flex-direction: column;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-y: contain;
+    /* Remove the old padding-bottom approach */
+    padding-bottom: 0 !important;
+  }
+
+  /* ─── HOME PAGE ─── */
+  #page-home.active {
+    scroll-snap-type: y proximity;
+  }
+
+  #page-home .hero {
+    scroll-snap-align: start;
+  }
+
+  #page-home .section {
+    scroll-snap-align: start;
+  }
+
+  /* ─── CHAT PAGE (special layout) ─── */
+  #page-assistant {
+    top: calc(var(--nav-height) + var(--sat)) !important;
+    bottom: calc(var(--tab-height) + var(--sab)) !important;
+    height: auto !important;
+    overflow: hidden !important;
+  }
+
+  #page-assistant .chat-page {
+    height: 100% !important;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  #page-assistant .chat-header {
+    flex-shrink: 0;
+    position: relative !important;
+  }
+
+  #page-assistant .lang-dropdown {
+    flex-shrink: 0;
+  }
+
+  #page-assistant .chat-messages {
+    flex: 1;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-y: contain;
+    padding-bottom: calc(var(--input-bar-height) + 16px) !important;
+    scroll-padding-bottom: calc(var(--input-bar-height) + 16px);
+  }
+
+  #page-assistant .chat-input-bar {
+    position: absolute !important;
+    bottom: 0 !important;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    padding: 8px 10px calc(8px) !important;
+    /* Frosted glass */
+    background: rgba(255, 255, 255, 0.95) !important;
+    -webkit-backdrop-filter: saturate(180%) blur(16px);
+    backdrop-filter: saturate(180%) blur(16px);
+    border-top: 0.5px solid rgba(0, 0, 0, 0.06);
+  }
+
+  /* ─── MAP PAGE (full viewport) ─── */
+  #page-map {
+    bottom: calc(var(--tab-height) + var(--sab)) !important;
+    overflow: hidden !important;
+  }
+
+  #page-map .map-page {
+    height: 100% !important;
+  }
+
+  #mapContainer {
+    height: 100% !important;
+    width: 100% !important;
+  }
+
+  .map-place-card {
+    bottom: 12px !important;
+    left: 8px !important;
+    right: 8px !important;
+    border-radius: 20px !important;
+    padding: 16px !important;
+    box-shadow: 0 -4px 30px rgba(0, 0, 0, 0.15), 0 4px 12px rgba(0, 0, 0, 0.08) !important;
+  }
+
+
+  /* ═══════════════════════════════════════════════════════════
+     NATIVE TOUCH FEEDBACK
+     Every interactive element gets instant feedback
+     ═══════════════════════════════════════════════════════════ */
+
+  /* Universal active state */
+  .action-card:active,
+  .sos-card:active,
+  .place-card:active,
+  .filter-chip:active,
+  .lang-chip:active,
+  .chat-welcome-chip:active,
+  .helpline-item:active,
+  .auth-lang-chip:active,
+  .fb-type:active,
+  .loc-option:active,
+  .rp-option:active,
+  .chat-sidebar-item:active {
+    transform: scale(0.96) !important;
+    transition: transform 0.08s ease !important;
+    opacity: 0.85;
+  }
+
+  /* Button active states (slightly different) */
+  .hero-cta:active,
+  .auth-btn:active,
+  .sos-call-btn:active,
+  .route-go-btn:active,
+  .profile-btn:active,
+  .mpc-btn:active,
+  .chat-sidebar-new:active,
+  .loc-picker-done:active,
+  .loc-picker-gps:active {
+    transform: scale(0.95) !important;
+    transition: transform 0.08s ease !important;
+    filter: brightness(0.92);
+  }
+
+  .btn-mic:active:not(.recording) {
+    transform: scale(0.88) !important;
+    transition: transform 0.08s ease !important;
+  }
+
+  .btn-send:active {
+    transform: scale(0.85) !important;
+    transition: transform 0.08s ease !important;
+  }
+
+  /* Map buttons */
+  .map-btn:active {
+    transform: scale(0.88) !important;
+    transition: transform 0.08s ease !important;
+  }
+
+  /* Message actions */
+  .msg-play:active,
+  .msg-map-btn:active {
+    transform: scale(0.92) !important;
+    opacity: 0.7;
+    transition: all 0.08s ease !important;
+  }
+
+
+  /* ═══════════════════════════════════════════════════════════
+     PULL-TO-REFRESH INDICATOR
+     ═══════════════════════════════════════════════════════════ */
+
+  .pull-indicator {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    z-index: 50;
+    pointer-events: none;
+    transition: height 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .pull-indicator.active {
+    height: 60px;
+  }
+
+  .pull-spinner {
+    width: 28px;
+    height: 28px;
+    border: 2.5px solid rgba(232, 101, 43, 0.2);
+    border-top-color: var(--saffron);
+    border-radius: 50%;
+    opacity: 0;
+    transform: scale(0.5) rotate(0deg);
+    transition: opacity 0.2s, transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+
+  .pull-indicator.pulling .pull-spinner {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+
+  .pull-indicator.refreshing .pull-spinner {
+    opacity: 1;
+    transform: scale(1);
+    animation: pullSpin 0.6s linear infinite;
+  }
+
+  @keyframes pullSpin {
+    to { transform: rotate(360deg); }
+  }
+
+
+  /* ═══════════════════════════════════════════════════════════
+     BOTTOM SHEET (native-style drag-to-dismiss)
+     ═══════════════════════════════════════════════════════════ */
+
+  .loc-picker-overlay.open,
+  #feedbackOverlay.open {
+    align-items: flex-end !important;
+  }
+
+  .loc-picker-sheet {
+    max-height: 90vh !important;
+    border-radius: 20px 20px 0 0 !important;
+    padding-bottom: calc(20px + var(--sab)) !important;
+    /* Spring animation */
+    animation: nativeSheetUp 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards !important;
+    /* Sheet handle */
+    position: relative;
+  }
+
+  .loc-picker-sheet::before {
+    content: '';
+    display: block;
+    width: 36px;
+    height: 4px;
+    border-radius: 2px;
+    background: rgba(0, 0, 0, 0.15);
+    margin: 0 auto 12px;
+    flex-shrink: 0;
+  }
+
+  @keyframes nativeSheetUp {
+    from {
+      transform: translateY(100%);
+      opacity: 0.8;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  /* Chat sidebar — native slide */
+  .chat-sidebar {
+    width: 85vw !important;
+    max-width: 340px !important;
+    border-radius: 0 20px 20px 0 !important;
+    padding-top: var(--sat);
+    padding-bottom: var(--sab);
+    box-shadow: 8px 0 40px rgba(0, 0, 0, 0.2) !important;
+  }
+
+  .chat-sidebar.open {
+    animation: nativeSidebarIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards !important;
+  }
+
+  @keyframes nativeSidebarIn {
+    from { transform: translateX(-100%); }
+    to   { transform: translateX(0); }
+  }
+
+
+  /* ═══════════════════════════════════════════════════════════
+     ROUTE PANEL — BOTTOM SHEET STYLE ON MOBILE
+     ═══════════════════════════════════════════════════════════ */
+
+  .route-panel {
+    position: absolute !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    top: auto !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    max-height: 65vh !important;
+    border-radius: 20px 20px 0 0 !important;
+    padding: 16px 16px calc(16px + var(--sab)) !important;
+    box-shadow: 0 -8px 30px rgba(0, 0, 0, 0.15) !important;
+    animation: nativeSheetUp 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards !important;
+    z-index: 1002 !important;
+  }
+
+  .route-panel::before {
+    content: '';
+    display: block;
+    width: 36px;
+    height: 4px;
+    border-radius: 2px;
+    background: rgba(0, 0, 0, 0.12);
+    margin: 0 auto 10px;
+  }
+
+  /* Route picker as bottom sheet */
+  .route-picker {
+    position: absolute !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    top: auto !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    max-height: 70vh !important;
+    border-radius: 20px 20px 0 0 !important;
+    box-shadow: 0 -8px 30px rgba(0, 0, 0, 0.2) !important;
+    animation: nativeSheetUp 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards !important;
+    z-index: 1003 !important;
+  }
+
+  .route-picker::before {
+    content: '';
+    display: block;
+    width: 36px;
+    height: 4px;
+    border-radius: 2px;
+    background: rgba(0, 0, 0, 0.12);
+    margin: 8px auto 4px;
+  }
+
+
+  /* ═══════════════════════════════════════════════════════════
+     NATIVE SCROLLBARS (hide on mobile like native apps)
+     ═══════════════════════════════════════════════════════════ */
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  * {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  /* Show subtle scroll indicator on chat */
+  .chat-messages::-webkit-scrollbar {
+    display: block;
+    width: 2px;
+  }
+  .chat-messages::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.08);
+    border-radius: 1px;
+  }
+
+
+  /* ═══════════════════════════════════════════════════════════
+     KEYBOARD AVOIDANCE
+     ═══════════════════════════════════════════════════════════ */
+
+  /* When keyboard is open (detected by JS adding class) */
+  body.keyboard-open .mobile-nav {
+    display: none !important;
+  }
+
+  body.keyboard-open #page-assistant {
+    bottom: 0 !important;
+  }
+
+  body.keyboard-open .chat-input-bar {
+    padding-bottom: 8px !important;
+  }
+
+
+  /* ═══════════════════════════════════════════════════════════
+     NATIVE-LIKE TRANSITIONS BETWEEN PAGES
+     ═══════════════════════════════════════════════════════════ */
+
+  /* Override aurora page transitions for more native feel */
+  .page.page-entering {
+    animation: nativePageIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards !important;
+  }
+
+  .page.page-leaving {
+    animation: nativePageOut 0.25s ease forwards !important;
+  }
+
+  @keyframes nativePageIn {
+    from {
+      opacity: 0;
+      transform: scale(0.97);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes nativePageOut {
+    from {
+      opacity: 1;
+      transform: scale(1);
+    }
+    to {
+      opacity: 0;
+      transform: scale(0.97);
+    }
+  }
+
+
+  /* ═══════════════════════════════════════════════════════════
+     NATIVE INPUT STYLING
+     ═══════════════════════════════════════════════════════════ */
+
+  input, textarea, select {
+    font-size: 16px !important; /* Prevents iOS zoom on focus */
+    border-radius: 12px;
+    appearance: none;
+    -webkit-appearance: none;
+  }
+
+  .chat-input {
+    font-size: 16px !important;
+    border-radius: 22px !important;
+    padding: 10px 16px !important;
+  }
+
+  /* Focus ring — thinner on mobile */
+  :focus-visible {
+    outline-width: 1.5px !important;
+    outline-offset: 1px !important;
+  }
+
+
+  /* ═══════════════════════════════════════════════════════════
+     EXPLORE PAGE — NATIVE CARD LAYOUT
+     ═══════════════════════════════════════════════════════════ */
+
+  .place-card {
+    border-radius: 16px !important;
+    margin-bottom: 10px !important;
+    /* Card shadow — more subtle like native */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 0 0 0.5px rgba(0, 0, 0, 0.04) !important;
+  }
+
+  .place-card-img-wrap {
+    border-radius: 16px 16px 0 0 !important;
+    height: 140px !important;
+  }
+
+  /* Filter bar — scroll snap */
+  .filter-bar {
+    scroll-snap-type: x mandatory;
+    scroll-padding: 0 14px;
+    padding-left: 14px !important;
+    gap: 6px !important;
+    /* Hide scrollbar */
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .filter-bar::-webkit-scrollbar { display: none; }
+
+  .filter-chip {
+    scroll-snap-align: start;
+    flex-shrink: 0;
+    border-radius: 20px !important;
+    padding: 7px 16px !important;
+    font-size: 12px !important;
+    font-weight: 600 !important;
+  }
+
+
+  /* ═══════════════════════════════════════════════════════════
+     EMERGENCY PAGE — NATIVE URGENCY FEEL
+     ═══════════════════════════════════════════════════════════ */
+
+  .sos-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 10px !important;
+    padding: 14px !important;
+  }
+
+  .sos-card {
+    border-radius: 16px !important;
+    padding: 18px 12px !important;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06) !important;
+  }
+
+  .sos-call-btn {
+    border-radius: 16px !important;
+    font-size: 16px !important;
+    padding: 16px 32px !important;
+    /* Pulsing urgency glow */
+    animation: sosCallPulse 2s ease-in-out infinite;
+  }
+
+  @keyframes sosCallPulse {
+    0%, 100% { box-shadow: 0 4px 16px rgba(220, 38, 38, 0.3); }
+    50%      { box-shadow: 0 4px 32px rgba(220, 38, 38, 0.5); }
+  }
+
+
+  /* ═══════════════════════════════════════════════════════════
+     AUTH PAGES — NATIVE FORM FEEL
+     ═══════════════════════════════════════════════════════════ */
+
+  .auth-page {
+    padding: 16px !important;
+    align-items: flex-end !important;
+  }
+
+  .auth-card {
+    border-radius: 20px 20px 0 0 !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    padding: 28px 20px calc(28px + var(--sab)) !important;
+    box-shadow: 0 -8px 30px rgba(0, 0, 0, 0.15) !important;
+    animation: nativeSheetUp 0.45s cubic-bezier(0.16, 1, 0.3, 1) forwards !important;
+  }
+
+  .auth-field input, .auth-field select {
+    padding: 14px 16px !important;
+    border-radius: 14px !important;
+  }
+
+  .auth-btn {
+    padding: 16px !important;
+    border-radius: 14px !important;
+    font-size: 16px !important;
+  }
+
+
+  /* ═══════════════════════════════════════════════════════════
+     PROFILE PAGE — NATIVE SETTINGS STYLE
+     ═══════════════════════════════════════════════════════════ */
+
+  .profile-header {
+    border-radius: 0 0 24px 24px !important;
+  }
+
+  .profile-info-card {
+    border-radius: 14px !important;
+    overflow: hidden;
+  }
+
+  .profile-info-row {
+    padding: 14px 16px !important;
+    min-height: 44px; /* iOS minimum tap target */
+  }
+
+  .profile-btn {
+    min-height: 48px !important;
+    border-radius: 14px !important;
+    font-size: 15px !important;
+  }
+
+  .profile-stat {
+    border-radius: 14px !important;
+  }
+
+  /* Language chips — larger touch targets */
+  .auth-lang-row {
+    gap: 8px !important;
+  }
+
+  .auth-lang-chip {
+    padding: 8px 16px !important;
+    font-size: 13px !important;
+    min-height: 36px;
+    display: flex;
+    align-items: center;
+  }
+
+
+  /* ═══════════════════════════════════════════════════════════
+     TOAST — NATIVE STYLE
+     ═══════════════════════════════════════════════════════════ */
+
+  #toast {
+    top: calc(var(--sat) + 56px) !important;
+    border-radius: 14px !important;
+    padding: 14px 20px !important;
+    font-size: 14px !important;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2), 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+    max-width: calc(100vw - 32px) !important;
+    /* Frosted glass */
+    background: rgba(26, 26, 46, 0.92) !important;
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    backdrop-filter: saturate(180%) blur(20px);
+  }
+
+}  /* end @media (max-width: 768px) */
+
+
+/* ═══════════════════════════════════════════════════════════════
+   EXTRA SMALL PHONES (< 380px)
+   ═══════════════════════════════════════════════════════════════ */
+
+@media (max-width: 380px) {
+  :root {
+    --nav-height: 44px;
+    --tab-height: 50px;
+  }
+
+  .mobile-nav button i {
+    font-size: 20px !important;
+  }
+
+  .mobile-nav button {
+    font-size: 8px !important;
+  }
+
+  .actions-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  .sos-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+
+/* ═══════════════════════════════════════════════════════════════
+   TALL PHONES (narrow aspect ratio like iPhone X+)
+   ═══════════════════════════════════════════════════════════════ */
+
+@media (max-width: 768px) and (min-height: 700px) {
+  .hero {
+    min-height: 360px !important;
+  }
+
+  .chat-welcome {
+    padding-top: 60px !important;
+  }
+}
+
+
+/* ═══════════════════════════════════════════════════════════════
+   LANDSCAPE PHONES
+   ═══════════════════════════════════════════════════════════════ */
+
+@media (max-height: 500px) and (max-width: 900px) {
+  .mobile-nav {
+    height: calc(40px + var(--sab)) !important;
+  }
+
+  .mobile-nav button span {
+    display: none !important;
+  }
+
+  .mobile-nav button i {
+    font-size: 20px !important;
+  }
+
+  .hero {
+    min-height: 240px !important;
+    padding: 20px 16px 40px !important;
+  }
+
+  .hero h1 {
+    font-size: 22px !important;
+  }
+
+  .hero p {
+    display: none !important;
+  }
+
+  .auth-card {
+    max-height: 80vh;
+    overflow-y: auto;
+  }
+}
+
+
+/* ═══════════════════════════════════════════════════════════════
+   PWA STANDALONE MODE
+   Behavior adjustments when installed as app
+   ═══════════════════════════════════════════════════════════════ */
+
+@media (display-mode: standalone) {
+  /* Extra top padding for status bar (no browser chrome) */
+  .navbar {
+    padding-top: max(var(--sat), 12px) !important;
+    height: calc(var(--nav-height) + max(var(--sat), 12px)) !important;
+  }
+
+  /* Hide "Install" prompts if any */
+  .pwa-install-prompt {
+    display: none !important;
+  }
+}
+
+/* iOS standalone mode */
+@media (display-mode: standalone) and (-webkit-min-device-pixel-ratio: 2) {
+  /* iOS rubber-band background color */
+  html {
+    background: linear-gradient(135deg, var(--maroon), var(--saffron-dark));
+  }
+
+  /* Prevent iOS rubber-band on fixed elements */
+  .page.active {
+    overscroll-behavior-y: contain;
+  }
+}
+
+
+/* ═══════════════════════════════════════════════════════════════
+   DARK MODE (system-detected) — NATIVE APP COLORS
+   ═══════════════════════════════════════════════════════════════ */
+
+@media (prefers-color-scheme: dark) and (max-width: 768px) {
+  /* Native dark mode — opt-in by uncommenting
+  :root {
+    --cream: #0d0d1a;
+    --cream-dark: #151528;
+    --ink: #e8e8f0;
+    --ink-light: #a0a0b8;
+    --ink-muted: #6a6a82;
+    --white: #1c1c2e;
+    --glass: rgba(255, 255, 255, 0.05);
+    --glass-border: rgba(255, 255, 255, 0.08);
+    --shadow-soft: 0 4px 30px rgba(0, 0, 0, 0.3);
+  }
+
+  body { background: var(--cream); }
+
+  .navbar {
+    background: linear-gradient(135deg, #1a0a10, #3a1a10) !important;
+  }
+
+  .mobile-nav {
+    background: rgba(13, 13, 26, 0.95) !important;
+    border-top-color: rgba(255, 255, 255, 0.06) !important;
+  }
+
+  .chat-header, .chat-input-bar {
+    background: rgba(13, 13, 26, 0.95) !important;
+  }
+
+  .msg-bot .msg-bubble {
+    background: #1c1c2e !important;
+    border-color: rgba(255, 255, 255, 0.06) !important;
+    color: var(--ink) !important;
+  }
+
+  .action-card, .place-card, .sos-card, .helpline-item,
+  .profile-info-card, .profile-stat {
+    background: #1c1c2e !important;
+    border-color: rgba(255, 255, 255, 0.06) !important;
+  }
+
+  .auth-card, .route-panel, .route-picker, .map-place-card,
+  .loc-picker-sheet, .chat-sidebar, .map-btn, .map-search {
+    background: #1c1c2e !important;
+    color: var(--ink) !important;
+  }
+
+  input, textarea, select {
+    background: #151528 !important;
+    color: var(--ink) !important;
+    border-color: rgba(255, 255, 255, 0.08) !important;
+  }
+
+  #toast {
+    background: rgba(30, 30, 50, 0.95) !important;
+  }
+  */
+}
+
+
+/* ═══════════════════════════════════════════════════════════════
+   MINIMUM TAP TARGET SIZES (WCAG / Material Guidelines)
+   ═══════════════════════════════════════════════════════════════ */
+
+@media (max-width: 768px) {
+  /* Ensure all interactive elements meet 44x44 minimum */
+  .nav-link,
+  .chat-sidebar-toggle,
+  .lang-picker-btn,
+  .route-panel-close,
+  .route-swap,
+  .route-gps-btn,
+  .mpc-close,
+  .helpline-call,
+  .fb-type {
+    min-width: 44px;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .filter-chip,
+  .lang-chip,
+  .map-filter-chip,
+  .auth-lang-chip {
+    min-height: 36px;
+  }
+
+  .helpline-item {
+    min-height: 56px;
+  }
+
+  .chat-sidebar-item {
+    min-height: 48px;
+  }
+
+  /* Larger touch target for close buttons */
+  .mpc-close {
+    width: 36px !important;
+    height: 36px !important;
+    font-size: 22px !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50% !important;
+    background: rgba(0, 0, 0, 0.05) !important;
+    top: 12px !important;
+    right: 12px !important;
+  }
+
+  .route-panel-close {
+    width: 36px !important;
+    height: 36px !important;
+    border-radius: 50% !important;
+    background: rgba(0, 0, 0, 0.05) !important;
+  }
+}
+
+
+/* ═══════════════════════════════════════════════════════════════
+   SCROLL SNAP FOR HORIZONTAL LISTS
+   ═══════════════════════════════════════════════════════════════ */
+
+@media (max-width: 768px) {
+  .lang-dropdown.open {
+    overflow-x: auto;
+    flex-wrap: nowrap !important;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding: 10px 14px !important;
+    gap: 6px !important;
+    scrollbar-width: none;
+  }
+
+  .lang-dropdown.open::-webkit-scrollbar { display: none; }
+
+  .lang-chip {
+    scroll-snap-align: start;
+    flex-shrink: 0 !important;
+  }
+
+  /* Map filters scroll snap */
+  .map-filters.open {
+    scroll-snap-type: x mandatory;
+    flex-wrap: nowrap !important;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .map-filters.open::-webkit-scrollbar { display: none; }
+
+  .map-filter-chip {
+    scroll-snap-align: start;
+    flex-shrink: 0 !important;
+  }
+}
+
+
+/* ═══════════════════════════════════════════════════════════════
+   REDUCED MOTION — RESPECT SYSTEM PREFERENCE
+   ═══════════════════════════════════════════════════════════════ */
+
+@media (prefers-reduced-motion: reduce) {
+  .pull-spinner,
+  .sos-call-btn {
+    animation: none !important;
+  }
+
+  .page.page-entering,
+  .page.page-leaving {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .loc-picker-sheet,
+  .auth-card,
+  .route-panel,
+  .route-picker,
+  .chat-sidebar {
+    animation: none !important;
+    transform: none !important;
+  }
+}
