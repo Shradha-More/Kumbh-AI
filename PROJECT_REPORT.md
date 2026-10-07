@@ -844,7 +844,7 @@ CMD ["uvicorn", "api.main:app", "--host", "0.0.0.0", "--port", "7860"]
 ### 16.4 Local Development
 
 ```bash
-git clone https://github.com/sidharth974/Kumbh.git
+git clone https://github.com/Shradha-More/Kumbh-AI
 cd Kumbh
 python3 -m venv venv && source venv/bin/activate
 pip install -r requirements.txt
