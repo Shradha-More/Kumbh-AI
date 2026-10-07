@@ -5,7 +5,7 @@
 
 ---
 
-**Submitted by:** Sidharth Navnath  
+**Submitted by:** Shraddha More  
 **Program:** B.E. / B.Tech — Artificial Intelligence & Data Science (AI&DS)  
 **Academic Year:** 2025-2026  
 **Project Domain:** Natural Language Processing, Speech Processing, Information Retrieval, Web Development  
@@ -36,7 +36,6 @@
 19. [Future Enhancements](#19-future-enhancements)
 20. [Conclusion](#20-conclusion)
 21. [References](#21-references)
-22. [Appendix](#22-appendix)
 
 ---
 
@@ -960,65 +959,6 @@ The techniques used — QLoRA fine-tuning, RAG, multilingual embeddings, voice p
 13. OSRM Project. http://project-osrm.org/
 14. HuggingFace Hub. https://huggingface.co/docs/hub/
 15. Google Text-to-Speech (gTTS). https://gtts.readthedocs.io/
-
----
-
-## 22. Appendix
-
-### A. Project Repository
-
-- **GitHub:** https://github.com/sidharth974/Kumbh
-- **HuggingFace Model:** https://huggingface.co/siddharthnavnath7/Kumbh
-- **HuggingFace Space:** https://siddharthnavnath7-yatri-ai.hf.space
-
-### B. API Testing Examples
-
-```bash
-# Text query
-curl -X POST http://localhost:8000/api/v1/query \
-  -H "Content-Type: application/json" \
-  -d '{"query": "कुंभ मेला 2027 कब है?", "language": "hi"}'
-
-# Emergency
-curl -X POST http://localhost:8000/api/v1/emergency \
-  -H "Content-Type: application/json" \
-  -d '{"query": "medical", "language": "hi"}'
-
-# Health check
-curl http://localhost:8000/api/v1/health
-```
-
-### C. Training Notebook
-
-The complete Colab training notebook is included at `Yatri_AI_Training.ipynb`.
-
-### D. Data Samples
-
-**Seed data sample (kumbh_2027_detailed.json):**
-
-```json
-{
-  "id": "shahi_snan_calendar",
-  "topic": "Shahi Snan Calendar 2027",
-  "content_en": "The Nashik Simhastha Kumbh Mela 2027 is expected to feature five major Shahi Snan dates. These dates are determined by astrological calculations based on Jupiter's transit through Leo (Simha Rashi)...",
-  "content_hi": "नाशिक सिंहस्थ कुंभ मेला 2027 में पाँच प्रमुख शाही स्नान तिथियाँ अपेक्षित हैं...",
-  "category": "schedule",
-  "tags": ["shahi_snan", "dates", "calendar", "kumbh_2027"]
-}
-```
-
-**QA training sample:**
-
-```json
-{
-  "instruction": "How to reach Trimbakeshwar from Nashik?",
-  "input": "",
-  "output": "From Nashik CBS, buses run every 15 minutes to Trimbakeshwar. The journey is 28km via NH-3, taking about 45 minutes. Auto-rickshaws charge ₹50-80 per person. You can also hire a cab for ₹400-600.",
-  "language": "en",
-  "domain": "transport",
-  "type": "procedural"
-}
-```
 
 ---
 
